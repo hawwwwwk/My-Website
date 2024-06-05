@@ -2,7 +2,6 @@ body {
     background-image: url('media/background-hills.gif');
     background-size: cover;
     image-rendering: pixelated;
-    
     font-family: Tahoma, sans-serif;
     font-size: 12px;
     height: 100vh;
@@ -13,7 +12,7 @@ body {
 .menu {
     width: 500px;
     background-color: #FFF;
-    border: 2px solid #80A0D5;
+    border: 2px solid #0078D7;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
@@ -23,6 +22,17 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .menu {
+        width: 90%;
+        height: 90%;
+        top: 5%;
+        left: 5%;
+        transform: none;
+    }
+}
+
 .menu-header {
     background: radial-gradient(ellipse at bottom, #469FFB 0%, #075AC4 100%);
     background-size: 200% 100%;
@@ -30,12 +40,14 @@ body {
     color: #FFF;
     padding: 10px;
     font-size: 20px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
     display: flex;
     align-items: center;
     text-shadow: -1px -1px 0 #000060, 1px -1px 0 #000060, -1px 1px 0 #000060, 1px 1px 0 #000060;
     border-bottom: #000060;
     border-width: 1px;
+    position: relative;
+    z-index: 1;
 }
 
 .menu-content {
@@ -94,35 +106,58 @@ body {
 .menu-divider::before {
     content: '';
     display: block;
-    height: 1px;
+    height: .8px;
     background: linear-gradient(to right, transparent, #acacac, transparent);
 }
 
+.orange-divider {
+    position: absolute;
+    bottom: -1px; 
+    left: 0;
+    right: 0;
+    height: 1px; 
+    z-index: 2; 
+}
+
+.orange-divider::before {
+    content: '';
+    display: block;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #f89539, transparent);
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    right: 0;
+}
+
 .user-icon-container {
-    margin: 0; /* Remove margin to align with the header */
+    margin: 0;
 }
 
 .user-icon-border {
     background-color: white;
     padding: 2px;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .user-icon {
-    width: 64px; /* Adjust size as needed */
-    height: 64px; /* Adjust size as needed */
-    border: 1px solid #0078D7; /* Blue border */
+    width: 64px;
+    height: 64px;
 }
 
 .menu-header .user-icon-container {
-    margin-right: 10px; /* Add some space between the icon and the text */
+    margin-right: 10px; 
 }
 
 .menu-right {
     background-color: #D4E5FA;
+}
+
+.menu-left {
+    border-right: 1px solid #0078D7;
 }
 
 #contact-menu {
@@ -133,3 +168,4 @@ body {
 #contact-menu:hover {
     background-image: url("media/contact_icon_hover.png");
 }
+
