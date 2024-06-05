@@ -17,12 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const contactButton = document.getElementById("menu-item-contact");
     contactButton.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default action
+        event.preventDefault();
         const email = "ethanmahlke@gmail.com";
         
-        // Copy email to clipboard
         navigator.clipboard.writeText(email).then(function() {
-            // Change button text to "Email copied!"
             const contactText = contactButton.querySelector(".menu-full");
             const contactIcon = contactButton.querySelector(".menu-icon");
             const originalText = contactText.textContent;
@@ -30,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
             contactText.textContent = "Email copied!";
             contactIcon.src = "media/contact_icon_copied.png";
             
-            // Change text and icon back to original after 3 seconds
             setTimeout(function() {
                 contactText.textContent = originalText;
                 contactIcon.src = originalIconSrc;
