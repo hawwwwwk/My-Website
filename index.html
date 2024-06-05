@@ -6,73 +6,64 @@
 </head>
 <body>
     <div class="menu">
-        <div class="menu-header">Start Menu</div>
+        <div class="menu-header">
+            <div class="user-icon-container">
+                <div class="user-icon-border">
+                    <img src="media/user_icon.png" alt="User Icon" class="user-icon"> <!-- User Icon -->
+                </div>
+            </div>
+            Ethan
+        </div>
         <div class="menu-content">
             <div class="menu-column">
-                <ul class="menu-list">
-                    <li>
-                        <a href="#">
-                            <img src="media/icon.png" alt="Programs Icon" class="menu-icon">
-                            <div class="menu-text">
-                                <span class="menu-short">Programs</span>
-                                <span class="menu-full">All Programs</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="media/icon.png" alt="Documents Icon" class="menu-icon">
-                            <div class="menu-text">
-                                <span class="menu-short">Docs</span>
-                                <span class="menu-full">Documents</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="media/icon.png" alt="Settings Icon" class="menu-icon">
-                            <div class="menu-text">
-                                <span class="menu-short">Settings</span>
-                                <span class="menu-full">Control Panel</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="media/icon.png" alt="Search Icon" class="menu-icon">
-                            <div class="menu-text">
-                                <span class="menu-short">Search</span>
-                                <span class="menu-full">Search Files</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                <a href="#" class="menu-item">
+                    <img src="media/icon.png" alt="Programs Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Programs</span>
+                        <span class="menu-full">All Programs</span>
+                    </div>
+                </a>
+                <a href="#" class="menu-item">
+                    <img src="media/icon.png" alt="Documents Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Docs</span>
+                        <span class="menu-full">Documents</span>
+                    </div>
+                </a>
+                <div class="menu-divider"></div> <!-- Divider -->
+                <a href="#" class="menu-item">
+                    <img src="media/icon.png" alt="Settings Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Settings</span>
+                        <span class="menu-full">Control Panel</span>
+                    </div>
+                </a>
+                <a href="#" class="menu-item">
+                    <img src="media/icon.png" alt="Search Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Search</span>
+                        <span class="menu-full">Search Files</span>
+                    </div>
+                </a>
             </div>
-            <div class="menu-column">
-                <ul class="menu-list">
-                    <li>
-                        <a href="#">
-                            <img src="media/icon.png" alt="Help Icon" class="menu-icon">
-                            <div class="menu-text">
-                                <span class="menu-short">Help</span>
-                                <span class="menu-full">Help and Support</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="icon6.png" alt="Run Icon" class="menu-icon">
-                            <div class="menu-text">
-                                <span class="menu-short">Run</span>
-                                <span class="menu-full">Run Program</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+            <div class="menu-column menu-right"> <!-- Right Column -->
+                <a href="https://status.ethxn.xyz/" target="_blank" class="menu-item" id="menu-item-status"> <!-- Status -->
+                    <img src="media/status_icon.png" alt="Help Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Status</span>
+                        <span class="menu-full">Status of Services</span>
+                    </div>
+                </a>
+                <a href="mailto:ethanmahlke@gmail.com" class="menu-item" id="menu-item-contact"> <!-- Contact -->
+                    <img src="media/contact_icon.png" alt="Run Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Contact</span>
+                        <span class="menu-full">Contact Me</span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 </body>
-</html>
-</html>
+<script src="scripts/icon_handler.js"></script>
 </html>
