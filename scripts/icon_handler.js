@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     menuItems.forEach(item => {
         const img = item.querySelector(".menu-icon");
         const originalSrc = img.src;
-        const hoverSrc = originalSrc.replace(".png", "_hover.png");
+        const extension = originalSrc.split('.').pop();
+        const hoverSrc = originalSrc.replace(`.${extension}`, `_hover.${extension}`);
 
         item.addEventListener("mouseenter", function() {
             img.src = hoverSrc;
