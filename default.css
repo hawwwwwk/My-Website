@@ -1,5 +1,5 @@
 body {
-    background-image: url('media/background-hills.gif');
+    background-image: url('media/background-hills-daytime.gif');
     background-size: cover;
     image-rendering: pixelated;
     font-family: Tahoma, sans-serif;
@@ -7,6 +7,7 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
+    position: relative;
 }
 
 .menu {
@@ -31,6 +32,12 @@ body {
         left: 5%;
         transform: none;
     }
+}
+
+/* Fix for mobile */
+html, body {
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .menu-header {
