@@ -1,0 +1,9 @@
+body{
+    background-image: url('media/background-hills.gif');
+    background-size: cover;
+    image-rendering: pixelated;
+    
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
