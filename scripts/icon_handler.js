@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
         navigator.clipboard.writeText(email).then(function() {
             const contactText = contactButton.querySelector(".menu-full");
             const contactIcon = contactButton.querySelector(".menu-icon");
-            const originalText = contactText.textContent;
-            const originalIconSrc = "media/contact_icon.png";
+            const contactOriginalText = contactText.textContent;
+            const contactOriginalIconSrc = "media/contact_icon.png";
             contactText.textContent = "Email copied!";
             contactIcon.src = "media/contact_icon_copied.png";
             
             setTimeout(function() {
-                contactText.textContent = originalText;
-                contactIcon.src = originalIconSrc;
+                contactText.textContent = contactOriginalText;
+                contactIcon.src = contactOriginalIconSrc;
             }, 3000);
         }).catch(function(error) {
             console.error("Could not copy text: ", error);
