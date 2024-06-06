@@ -1,5 +1,5 @@
 body {
-     /*background-image: url('media/background-hills-daytime.gif');*/ 
+    background-image: url('media/background-hills-day.gif');
     background-size: cover;
     image-rendering: pixelated;
     font-family: Tahoma, sans-serif;
@@ -174,5 +174,61 @@ html, body {
 
 #contact-menu:hover {
     background-image: url("media/contact_icon_hover.png");
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffde; /* Tanish-yellow background */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Tahoma, sans-serif;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+/* for speech bubble effect */
+.notification::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #ffffde;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+.notification::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    right: 14px;
+    width: 0;
+    height: 0;
+    border: 22px solid transparent;
+    border-top-color: black;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+    margin-bottom: -10px;
+    z-index: -1;
+}
+
+.notification-title {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.notification-subtext {
+    font-size: 12px;
 }
 
