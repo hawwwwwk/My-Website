@@ -1,5 +1,5 @@
 body {
-    background-image: url('media/background-hills-daytime.gif');
+     /*background-image: url('media/background-hills-daytime.gif');*/ 
     background-size: cover;
     image-rendering: pixelated;
     font-family: Tahoma, sans-serif;
@@ -129,7 +129,7 @@ html, body {
 .orange-divider::before {
     content: '';
     display: block;
-    height: 1px;
+    height: 3px;
     background: linear-gradient(to right, transparent, #f89539, transparent);
     position: absolute; 
     top: 0; 
