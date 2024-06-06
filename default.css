@@ -107,13 +107,13 @@ html, body {
 
 .menu-divider {
     padding: 0;
-    margin: 5px 0;
+    margin: 4px 0;
 }
 
 .menu-divider::before {
     content: '';
     display: block;
-    height: .8px;
+    height: 2px;
     background: linear-gradient(to right, transparent, #acacac, transparent);
 }
 
