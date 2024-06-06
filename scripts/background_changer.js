@@ -20,6 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
         backgroundButtonText.textContent = currentBackgroundIndex === 0 ? "/time set day" : "/time set night";
         setTimeout(function() {
             backgroundButtonText.textContent = backgroundOriginalText;
-        }, 3000);
+        }, 1000);
     });
 });
