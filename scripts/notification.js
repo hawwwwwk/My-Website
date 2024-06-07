@@ -11,5 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Welcome message
-    showNotification('Hiya!', 'Welcome to my website! Enjoy your stay!');
+    if (window.innerWidth >= 768) {
+        showNotification('Hiya!', 'Welcome to my website! Enjoy your stay!');
+    } else {
+        showNotification('Mobile device', 'This website look\'s better on a desktop! Consider switching!');
+    }
 });
