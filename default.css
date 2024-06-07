@@ -27,7 +27,6 @@ body {
 @media (max-width: 600px) {
     .menu {
         width: 90%;
-        height: 90%;
         top: 5%;
         left: 5%;
         transform: none;
