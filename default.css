@@ -1,6 +1,8 @@
 body {
     background-image: url('media/background-hills-day.gif');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     image-rendering: pixelated;
     font-family: Tahoma, sans-serif;
     font-size: 12px;
@@ -53,20 +55,21 @@ body {
     position: absolute;
     top: 10%;
     left: 50%;
+
     transform: translate(-50%);
 }
 
 .blog-image-container {
-    width: 50%; /* Adjust this percentage based on your design */
-    max-width: 100%; /* Prevents the container from exceeding the parent's width */
+    width: 50%; 
+    max-width: 100%; 
     margin: 0 auto;
     border: 2px solid #0078D7;
     box-shadow: 0 0 2px rgba(0, 0, 0, 1);
     border-radius: 5px;
-    overflow: hidden; /* Ensures nothing overflows */
-    text-align: center; /* Center content inside the container */
+    overflow: hidden; 
+    text-align: center; 
     box-sizing: border-box;
-    padding: 10px; /* Optional, for spacing inside the container */
+    padding: 10px; 
 }
 
 .blog-image {
@@ -75,7 +78,7 @@ body {
     max-width: 100%;
     display: block;
     border-radius: 5px;
-    object-fit: contain; /* Ensures the entire image fits within the container */
+    object-fit: contain; 
 }
 
 .blog-image-subtext {
@@ -84,7 +87,6 @@ body {
     font-style: italic;
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 600px) {
     .menu {
         width: 90%;
@@ -245,15 +247,15 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffffde; /* Tanish-yellow background */
+    background-color: #ffffde; 
     border: 1px solid black;
     border-radius: 10px;
     padding: 15px;
     max-width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Tahoma, sans-serif;
-    display: none; /* Hidden by default */
-    z-index: 1000; /* Ensure it is above other elements */
+    display: none; 
+    z-index: 1000;
 }
 
 /* for speech bubble effect */
