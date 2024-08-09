@@ -23,6 +23,27 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.blog-title {
+    background-color: #D4E5FA;
+    color: #000000;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.blog-post-menu {
+    width: 70%;
+    background-color: #FFF;
+    border: 2px solid #0078D7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
     .menu {
@@ -62,6 +83,16 @@ html, body {
 
 .menu-column {
     width: 50%;
+    border-right: 1px solid #E0E0E0;
+}
+
+.blog-column-right {
+    width: 20%;
+    border-right: 1px solid #E0E0E0;
+}
+
+.blog-column-left {
+    width: 80%;
     border-right: 1px solid #E0E0E0;
 }
 

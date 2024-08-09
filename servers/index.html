@@ -1,0 +1,73 @@
+<!--
+    TODO:
+    - Make a new title for the page, like "Meet the Servers!" is cool and all, but I want like an image or something instead of just text. Like how TF2 does their cool titles.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+        body {
+            background-color: black;
+        }
+    </style>
+    <link rel="icon" href="../media/favicon.png">
+    <link rel="preload" href="../media/background-hills-day.gif" as="image">
+    <link rel="preload" href="../media/background-hills-night.gif" as="image">
+    <link rel="stylesheet" href="../default.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ethxn - Meet the Servers!</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-header">
+            Meet the Servers! (WIP!!)
+            <div class="orange-divider"></div> <!-- Top Orange Divider -->
+        </div>
+        
+        <div class="menu-content">
+            <div class="menu-column menu-left"> <!-- Left Column -->
+                <a href="sirius/" class="menu-item" id="menu-item-sirius"> <!-- Sirius - R610 -->
+                    <img src="../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Sirius</span>
+                        <span class="menu-full">Dell R610</span>
+                    </div>
+                </a>
+                <a href="antares/" class="menu-item" id="menu-item-antares"> <!-- Sirius - R610 -->
+                    <img src="../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Antares</span>
+                        <span class="menu-full">Dell R710</span>
+                    </div>
+                </a>
+                <a href="proxima/" class="menu-item" id="menu-item-antares"> <!-- Proxima - Raspberry Pi -->
+                    <img src="../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Proxima</span>
+                        <span class="menu-full">Raspberry Pi 3 Model B+</span>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-column menu-right"> <!-- Right Column -->
+                <a href="https://ethxn.xyz/" class="menu-item" id="menu-item-status"> <!-- Home -->
+                    <img src="../media/home_icon.png" alt="Status Icon" class="menu-icon">
+                    <div class="menu-text"> 
+                        <span class="menu-short">Home</span>
+                        <span class="menu-full">Back to Home...</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="notification" class="notification">
+        <div class="notification-title"></div>
+        <div class="notification-subtext"></div>
+    </div>
+    <script src="scripts/icon_handler.js"></script>
+    <script src="scripts/background_changer.js"></script>
+    <script src="scripts/notification.js"></script>
+</body>
+<script src="scripts/icon_handler.js"></script>
+<script src="scripts/background_changer.js"></script>
+</html>
