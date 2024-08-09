@@ -14,7 +14,7 @@ body {
     width: 500px;
     background-color: #FFF;
     border: 2px solid #0078D7;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 1);
     border-radius: 5px;
     overflow: hidden;
     position: absolute;
@@ -27,21 +27,61 @@ body {
     background-color: #D4E5FA;
     color: #000000;
     padding: 10px;
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
+}
+
+.blog-subtitle {
+    background-color: #D4E5FA;
+    color: #000000;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.blog-list {
+    font-size: 14px;
 }
 
 .blog-post-menu {
     width: 70%;
     background-color: #FFF;
     border: 2px solid #0078D7;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 1);
     border-radius: 5px;
     overflow: hidden;
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%);
+}
+
+.blog-image-container {
+    width: 50%; /* Adjust this percentage based on your design */
+    max-width: 100%; /* Prevents the container from exceeding the parent's width */
+    margin: 0 auto;
+    border: 2px solid #0078D7;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    overflow: hidden; /* Ensures nothing overflows */
+    text-align: center; /* Center content inside the container */
+    box-sizing: border-box;
+    padding: 10px; /* Optional, for spacing inside the container */
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    border-radius: 5px;
+    object-fit: contain; /* Ensures the entire image fits within the container */
+}
+
+.blog-image-subtext {
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
 }
 
 /* Responsive design for smaller screens */
@@ -52,12 +92,6 @@ body {
         left: 5%;
         transform: none;
     }
-}
-
-/* Fix for mobile */
-html, body {
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 .menu-header {
@@ -94,6 +128,7 @@ html, body {
 .blog-column-left {
     width: 80%;
     border-right: 1px solid #E0E0E0;
+    padding: 10px;
 }
 
 .menu-column:last-child {
