@@ -50,6 +50,10 @@ p {
     font-size: 14px;
 }
 
+.purple {
+    color: #ff03ff;
+}
+
 .blog-post-menu {
     width: 70%;
     background-color: #FFF;
@@ -84,6 +88,15 @@ p {
     display: block;
     border-radius: 5px;
     object-fit: contain; 
+}
+
+.blinkee {
+    height: auto;
+    display: block;
+    object-fit: contain; 
+    text-align: center;
+    transform: translateX(-50%);
+    margin-left: 50%;
 }
 
 .blog-image-subtext {
