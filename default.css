@@ -1,5 +1,3 @@
-html{ padding-bottom: 25px;}
-
 body {
     background-image: url('media/background-hills-day.gif');
     background-size: cover;
@@ -30,6 +28,23 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+textarea {
+    display: block;
+    margin: 0 auto; 
+}
+
+.ethxn-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.ethxn-button {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
 }
 
 .blog-title {
