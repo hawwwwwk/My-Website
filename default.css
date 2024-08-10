@@ -12,6 +12,11 @@ body {
     position: relative;
 }
 
+p {
+    font-size: 14px;
+    text-align: center;
+}
+
 .menu {
     width: 500px;
     background-color: #FFF;
