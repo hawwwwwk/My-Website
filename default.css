@@ -101,6 +101,36 @@ p {
     }
 }
 
+.music-list {
+    position: relative;
+    font-size: 14px;
+}
+
+.music-list ul li {
+    position: relative;
+    left: 0;
+    color: #000000;
+    list-style: none;
+    margin: 4px 0;
+    border-left: 2px solid #000000;
+    cursor: pointer;
+}
+
+.music-list ul li span {
+    position: relative;
+    padding: 4px;
+    padding-left: 12px;
+    display: inline-block;
+    z-index: 1;
+}
+
+.music-list ul li:hover{
+    background-color: #d9d9d9;
+}
+.music-list-span-right {
+    float: right;
+}
+
 .menu-header {
     background: radial-gradient(ellipse at bottom, #469FFB 0%, #075AC4 100%);
     background-size: 200% 100%;
