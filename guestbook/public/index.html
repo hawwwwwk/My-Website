@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+        body {
+            background-color: black;
+        }
+    </style>
+    <link rel="icon" href="../../media/favicon.png">
+    <link rel="preload" href="../../media/background-hills-day.gif" as="image">
+    <link rel="preload" href="../../media/background-hills-night.gif" as="image">
+    <link rel="stylesheet" href="../../default.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ethxn - Meet the Servers!</title>
+</head>
+<body>
+    <div class="guestbook-menu">
+        <div class="menu-header">
+            Guestbook
+            <div class="orange-divider"></div> <!-- Top Orange Divider -->
+        </div>
+        
+        <div class="menu-content">
+            <div class="menu-column menu-left"> <!-- Left Column -->
+                <div class="guestbook-banner-container">
+                    <img src="guestbook_banner.jpg" alt="Guestbook Banner" class="guestbook-banner">
+                </div>
+                <div class="form-entries-container">
+                    <form id="guestbook-form">
+                        <p>Screenname:</p>
+                        <input type="text" name="screenname" required class="guestbook-oneline-entry">
+                        <p>Website:</p>
+                        <input type="text" name="website" class="guestbook-oneline-entry">
+                        <p>Message:</p>
+                        <textarea name="message" required class="guestbook-message-entry"></textarea>
+                        <p>NOTE: I am still working to make this pretty looking ;-; feel free to sign for the time being!</p>
+                        <br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <script src="guestbook.js"></script>
+            </div>
+            <div class="menu-column menu-right"> <!-- Right Column -->
+                <a href="https://ethxn.xyz/" class="menu-item" id="menu-item-status"> <!-- Home -->
+                    <img src="../../media/home_icon.png" alt="Status Icon" class="menu-icon">
+                    <div class="menu-text"> 
+                        <span class="menu-short">Home</span>
+                        <span class="menu-full">Back to Home...</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="guestbook-entries-menu">
+        <div class="menu-content">
+            <div class="guestbook-column-left menu-left"> <!-- Left Column -->
+                <div id="guestbook-entries"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="notification" class="notification">
+        <div class="notification-title"></div>
+        <div class="notification-subtext"></div>
+    </div>
+    <script src="scripts/icon_handler.js"></script>
+    <script src="scripts/background_changer.js"></script>
+    <script src="scripts/notification.js"></script>
+</body>
+</html>
