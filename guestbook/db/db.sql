@@ -1,0 +1,10 @@
+CREATE DATABASE guestbook;
+USE guestbook;
+
+CREATE TABLE entries (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    screenname VARCHAR(100) NOT NULL,
+    website VARCHAR(255) NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
