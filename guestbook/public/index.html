@@ -26,15 +26,19 @@
                 <div class="guestbook-banner-container">
                     <img src="guestbook_banner.jpg" alt="Guestbook Banner" class="guestbook-banner">
                 </div>
+                <div class="menu-divider"></div> <!-- Divider -->
                 <div class="form-entry-container">
                     <form id="guestbook-form">
-                        <p>Screenname:</p>
+                        Screenname:
                         <input type="text" name="screenname" required class="guestbook-oneline-entry">
-                        <p>Website:</p>
+                        <br>
+                        Website (Optional):
                         <input type="text" name="website" class="guestbook-oneline-entry">
-                        <p>Message:</p>
+                        <br>
+                        Message:
                         <textarea name="message" required class="guestbook-message-entry"></textarea>
-                        <button type="submit">Submit</button>
+                        <div class="menu-divider"></div> <!-- Divider -->
+                        <button type="submit" class="submit-button">Submit</button>
                     </form>
                 </div>
                 <script src="guestbook.js?v=2"></script>
@@ -54,7 +58,7 @@
     <div class="guestbook-entries-menu">
         <div class="menu-content">
             <div class="guestbook-column-left menu-left"> <!-- Left Column -->
-                <div id="guestbook-entries"></div>
+                <div id="guestbook-entries" class="guestbook-entries"></div>
             </div>
         </div>
     </div>

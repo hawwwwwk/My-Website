@@ -56,11 +56,17 @@ function loadEntries() {
             const entryDiv = document.createElement('div');
             entryDiv.classList.add('guestbook-entry');
             entryDiv.innerHTML = `
-                <strong>${escapeHtml(entry.screenname)}</strong> 
-                (${escapeHtml(entry.website) || 'No Website'})<br>
-                ${escapeHtml(entry.message)}<br>
-                <small>Posted on ${new Date(entry.created_at).toLocaleString()}</small>
-                <hr>`;
+                <strong>${escapeHtml(entry.screenname)}</strong> `;
+            if (entry.website?.includes('http')) {
+                entryDiv.innerHTML = entryDiv.innerHTML + `<a href="${escapeHtml(entry.website)}" target="_blank">(${escapeHtml(entry.website)})</a> : `;
+            } else if (entry.website) {
+                entryDiv.innerHTML = entryDiv.innerHTML + `(${escapeHtml(entry.website)}) : `;
+            } else {
+                entryDiv.innerHTML = entryDiv.innerHTML + ` : `;
+            }
+            entryDiv.innerHTML = entryDiv.innerHTML + `${escapeHtml(entry.message)}<br>
+            <small>Posted on ${new Date(entry.created_at).toDateString()}</small>
+            <br><div class="menu-divider"></div>`;
             container.appendChild(entryDiv);
         });
     })
@@ -70,7 +76,7 @@ function loadEntries() {
     });
 }
 
-// ulti to escape HTML and prevent XSS attacks :3
+// util to escape HTML and prevent XSS attacks :3
 function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
