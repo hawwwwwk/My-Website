@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // give data to the server 
-        fetch('http://10.251.252.200:3000/submit', {
+        fetch('/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // loads and displays guestbook entries
 function loadEntries() {
-    fetch('http://10.251.252.200:3000/entries')
+    fetch('/entries')
     .then(response => {
         if (!response.ok) {
             throw new Error('Failed to load guestbook entries.');
