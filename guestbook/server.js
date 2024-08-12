@@ -1,43 +1,44 @@
-require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require('mysql2'); // using mysql2... i guess
-const cors = require('cors');
+const mysql = require('mysql');
+const cors = require('cors'); // Import the cors package
+
 const app = express();
 const port = 3000;
 
-app.use(cors());
-app.use(bodyParser.json());
-app.use(express.static('public')); // server static !
+// Configure CORS to allow requests from your domain
+app.use(cors({
+    origin: 'http://ethxn.xyz', // Allow only your domain
+    methods: 'GET,POST', // Allowed methods
+    credentials: true // If you're using credentials (cookies, etc.)
+}));
 
-// using env for "security"
+app.use(bodyParser.json());
+app.use(express.static('public'));
+
 const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    host: 'localhost',
+    user: 'guestbook_user',
+    password: 'GUESTBOOK124!?vault',
+    database: 'guestbook'
 });
 
 db.connect(err => {
     if (err) {
-        console.error('Error connecting to MySQL:', err);
         throw err;
     }
     console.log('Connected to MySQL');
 });
 
-// endpoint to get entries
 app.get('/entries', (req, res) => {
     db.query('SELECT * FROM entries ORDER BY created_at DESC', (err, results) => {
         if (err) {
-            console.error('Error retrieving entries:', err);
             return res.status(500).send('Error retrieving entries');
         }
         res.json(results);
     });
 });
 
-// endpoint to submit new entry
 app.post('/submit', (req, res) => {
     const { screenname, website, message } = req.body;
     if (!screenname || !message) {
@@ -47,16 +48,12 @@ app.post('/submit', (req, res) => {
     const entry = { screenname, website, message };
     db.query('INSERT INTO entries SET ?', entry, (err, result) => {
         if (err) {
-            console.error('Error saving entry:', err);
             return res.status(500).send('Error saving entry');
         }
         res.status(200).send('Entry saved');
     });
 });
 
-// start server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
-
-// i don't like js
