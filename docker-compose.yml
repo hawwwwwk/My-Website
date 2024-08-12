@@ -2,6 +2,7 @@ version: '3'
 services:
   web:
     container_name: www
+    command: /bin/bash -c "apt-get update && apt-get install -y nano && apachectl -D FOREGROUND"
     image: httpd:latest
     volumes:
       - ./:/usr/local/apache2/htdocs/
