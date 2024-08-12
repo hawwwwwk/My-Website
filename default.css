@@ -92,6 +92,13 @@ textarea {
     cursor: pointer;
 }
 
+.homepage-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+}
+
 .guestbook-banner {
     width: 100%;
     max-width: 100%;
