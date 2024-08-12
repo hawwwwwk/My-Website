@@ -1,15 +1,17 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const cors = require('cors'); // Import the cors package
 
 const app = express();
 const port = 3000;
 
+// Configure CORS to allow requests from your domain
 app.use(cors({
-    origin: 'http://ethxn.xyz',
-    methods: 'GET,POST', 
-    credentials: true 
+    origin: 'http://ethxn.xyz', // Allow requests from your domain
+    methods: 'GET,POST', // Allowed methods
+    credentials: true // If you're using credentials (cookies, etc.)
 }));
 
 app.use(bodyParser.json());
