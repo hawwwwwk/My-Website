@@ -31,7 +31,7 @@ p {
 }
 
 .guestbook-menu {
-    width: 500px;
+    width: 600px;
     background-color: #FFF;
     border: 2px solid #0078D7;
     box-shadow: 0 0 2px rgba(0, 0, 0, 1);
@@ -46,6 +46,7 @@ p {
 .guestbook-column-left {
     width: 50%;
     border-right: 1px solid #E0E0E0;
+    padding: 10px;
 }
 
 .guestbook-column-right {
@@ -60,6 +61,7 @@ p {
     box-shadow: 0 0 2px rgba(0, 0, 0, 1);
     border-radius: 5px;
     overflow: hidden;
+    padding: 10px;
     margin-top: 25px;
     margin-bottom: 25px;
     margin-left: auto;
@@ -147,7 +149,7 @@ textarea {
     box-shadow: 0 0 2px rgba(0, 0, 0, 1);
     border-radius: 5px;
     overflow: hidden;
-    max-width: fit-content;
+    max-width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: auto;
@@ -298,12 +300,6 @@ textarea {
 
 .blog-column-left {
     width: 80%;
-    border-right: 1px solid #E0E0E0;
-    padding: 10px;
-}
-
-.guestbook-column-left {
-    width: 100%;
     border-right: 1px solid #E0E0E0;
     padding: 10px;
 }
