@@ -17,6 +17,10 @@ p {
     text-align: center;
 }
 
+.screenname {
+    color: #e53e32;
+}
+
 .menu {
     width: 500px;
     background-color: #FFF;
