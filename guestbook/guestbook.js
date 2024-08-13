@@ -56,7 +56,7 @@ function loadEntries() {
             const entryDiv = document.createElement('div');
             entryDiv.classList.add('guestbook-entry');
             entryDiv.innerHTML = `
-                <strong>${escapeHtml(entry.screenname)}</strong> `;
+                <strong class="screenname">${escapeHtml(entry.screenname)}</strong> `;
             if (entry.website?.includes('http')) {
                 entryDiv.innerHTML = entryDiv.innerHTML + `<a href="${escapeHtml(entry.website)}" target="_blank">(${escapeHtml(entry.website)})</a> : `;
             } else if (entry.website) {
