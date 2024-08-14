@@ -1,5 +1,7 @@
 [
-    {"title": "Post 1", "filename": "post1.html", "date": "2020-01-01"},
-    {"title": "Post 2", "filename": "post2.html", "date": "2020-01-02"},
-    {"title": "Post 3", "filename": "post3.html", "date": "2020-01-03"} 
+    {
+        "title": "A Blog is Born", 
+        "filename": "a_blog_is_born.html", 
+        "date": "August 14, 2024"
+    }
 ]
