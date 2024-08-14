@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // give data to the server 
-        fetch('/submit', {
+        fetch('submit/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
