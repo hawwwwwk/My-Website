@@ -30,7 +30,7 @@ db.connect(err => {
     console.log('Connected to MySQL');
 });
 
-app.get('/entries', (req, res) => {
+app.get('entries/', (req, res) => {
     db.query('SELECT * FROM entries ORDER BY created_at DESC', (err, results) => {
         if (err) {
             return res.status(500).send('Error retrieving entries');
@@ -39,7 +39,7 @@ app.get('/entries', (req, res) => {
     });
 });
 
-app.post('/submit', (req, res) => {
+app.post('submit/', (req, res) => {
     const { screenname, website, message } = req.body;
     if (!screenname || !message) {
         return res.status(400).send('Screenname and message are required');
