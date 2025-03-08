@@ -1,10 +1,27 @@
 version: '3'
+
 services:
   web:
     container_name: www
-    command: /bin/bash -c "apt-get update && apt-get install -y nano && apachectl -D FOREGROUND"
     image: httpd:latest
+    command: /bin/bash -c "apt-get update && apt-get install -y nano && apachectl -D FOREGROUND"
     volumes:
-      - ./:/usr/local/apache2/htdocs/
+      - /home/ethxn/My Website/apache-config/mime.types:/usr/local/apache2/conf/mime.types
+      - /home/ethxn/My Website/apache-config:/usr/local/apache2/conf
+      - .:/usr/local/apache2/htdocs
+
     ports:
       - "80:80"
+    depends_on:
+      - guestbook
+
+  guestbook:
+    container_name: guestbook
+    image: node:latest
+    working_dir: /usr/src/app
+    command: /bin/bash -c "npm install && node server.js"
+    volumes:
+      - "/home/ethxn/My Website/guestbook:/usr/src/app"
+    ports:
+      - "3000:3000"
+    restart: always
