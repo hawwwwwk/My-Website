@@ -5,13 +5,20 @@
   <atom:link href="https://ethxn.xyz/feed.xml" rel="self" type="application/rss+xml" />
   <title>Ethxn's Blog</title>
   <link>https://www.ethxn.xyz/</link>
-  <description>My little rambling corner of the WWW...</description>
+  <description>my little rambling corner of the WWW...</description>
   <item>
     <title>A Blog is Born</title>
     <pubDate>Wed, 14 Aug 2024 15:40:00 -0800</pubDate>
     <link>https://www.ethxn.xyz/blog/posts/a_blog_is_born.html</link>
     <guid>https://www.ethxn.xyz/blog/posts/a_blog_is_born.html</guid>
     <description>Finally starting one of these! Yahoo!!</description>
+  </item>
+  <item>
+    <title>The Guestbook is Finally Up</title>
+    <pubDate>Wed, 14 Aug 2024 3:00:00 -0800</pubDate>
+    <link>https://www.ethxn.xyz/blog/posts/the_guestbook_is_finally_up.html</link>
+    <guid>https://www.ethxn.xyz/blog/posts/the_guestbook_is_finally_up.html</guid>
+    <description>jesus christ that took forever :sob:</description>
   </item>
 </channel>
 </rss> 
