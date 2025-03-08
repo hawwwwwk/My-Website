@@ -5,7 +5,6 @@ const mysql = require('mysql2');
 const cors = require('cors'); // I HATE YOU CORS YOU WASTED SO MUCH OF MY TIME
 
 const app = express();
-const port = 3000;
 
 app.use(cors({
     origin: 'http://ethxn.xyz',
@@ -54,6 +53,12 @@ app.post('/submit', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+app.listen(3000, '0.0.0.0', () => {
+    console.log("Server running at http://0.0.0.0:3000");
 });
+
+app._router.stack.forEach(function(r){
+    if (r.route && r.route.path) {
+      console.log(r.route.path)
+    }
+  });
