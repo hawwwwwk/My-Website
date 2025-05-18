@@ -21,6 +21,36 @@ p {
     color: #e53e32;
 }
 
+.webring-container {
+    margin: auto;
+    align-items: center;
+}
+
+.webring{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.button {
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    width: 88px;
+    height: 31px;
+}
+
+.button:hover {
+    border: #469FFB;
+    border-width: 3px;
+}
+
+.cool-button {
+    width: 88px;
+    height: 31px;
+}
+
+
 .menu {
     width: 500px;
     background-color: #FFF;
@@ -98,12 +128,7 @@ textarea {
     cursor: pointer;
 }
 
-.homepage-button {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    cursor: pointer;
-}
+
 
 .guestbook-banner {
     width: 100%;
