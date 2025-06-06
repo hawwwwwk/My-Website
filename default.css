@@ -217,6 +217,8 @@ textarea {
     cursor: pointer;
 }
 
+
+
 .guestbook-oneline-entry {
     display: block;
     margin: 0 auto; 
@@ -444,6 +446,40 @@ textarea {
 
 #contact-menu:hover {
     background-image: url("media/contact_icon_hover.png");
+}
+
+#navbar {
+    background: radial-gradient(ellipse at bottom, #469FFB 0%, #075AC4 100%);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-size: 200% 100%;
+    background-position: center;
+    color: #FFF;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    text-shadow: -1px -1px 0 #000060, 1px -1px 0 #000060, -1px 1px 0 #000060, 1px 1px 0 #000060;
+    border-bottom: #000060;
+        border-bottom-width: medium;
+    border-width: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+#profile-top-right {
+    width: 600px;
+    background-color: #FFF;
+    border: 2px solid #0078D7;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: fit-content;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .notification {
