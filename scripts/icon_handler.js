@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const contactButton = document.getElementById("menu-item-contact");
     contactButton.addEventListener("click", function(event) {
         event.preventDefault();
-        const email = "ethanmahlke@gmail.com";
+        const email = "ethxn.xyz@proton.me";
         
         navigator.clipboard.writeText(email).then(function() {
             const contactText = contactButton.querySelector(".menu-full");
