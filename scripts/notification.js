@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         setTimeout(() => {
             notification.style.display = 'none';
-        }, 5000); // Hide after 5 seconds
+        }, 5000); // hide after 5 seconds
     }
 
-    // Welcome message
+    // welcome message
     if (window.innerWidth >= 768) {
         showNotification('Hiya!', 'Welcome to my website! Enjoy your stay!');
     } else {
-        showNotification('Mobile device', 'This website look\'s better on a desktop! Consider switching!');
+        showNotification('Mobile device', 'This website is mobile UNFRIENDLY. Consider switching to desktop~');
     }
 });
