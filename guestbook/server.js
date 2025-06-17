@@ -29,6 +29,8 @@ db.connect(err => {
     console.log('Connected to MySQL');
 });
 
+// this is so vulnerable 
+
 // sanitize user input
 const sanitizeInput = (input) => {
     return input.replace(/</g, "&lt;").replace(/>/g, "&gt;").trim(); // Prevents XSS
