@@ -3,7 +3,6 @@
 .htaccess
 media/use_later/
 media/use_later/windows_icons_png/
-/docker-compose.yml
-/dockerfile
 guestbook/.htaccess
-/.vscode
+.vscode/
+apache-config/
