@@ -95,7 +95,7 @@
                 </a>
             </div>
             <div class="menu-column menu-right"> <!-- Right Column -->
-                <a href="https://status.ethxn.xyz/" class="menu-item" id="menu-item-status">
+                <a href="https://status.ethxn.xyz/" class="menu-item" id="menu-item-status"> <!-- Status Button -->
                     <img src="media/status_icon.gif" alt="Status Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Status</span>
@@ -105,11 +105,19 @@
                 <a href="" class="menu-item" id="menu-item-background"> <!-- Background Changer -->
                     <img src="media/background_icon.png" alt="Background Icon" class="menu-icon">
                     <div class="menu-text">
-                        <span class="menu-short">Background</span>
+                        <span class="menu-short">Background (New!)</span>
                         <span class="menu-full">Change Background</span>
                     </div>
                 </a>
-                <a href="mailto:ethanmahlke@gmail.com" class="menu-item" id="menu-item-contact">
+                <a href="" class="menu-item" id="menu-item-player" onclick="openPlayer(); return false;"> <!-- Music Player -->
+                    <!-- "wahhhhh anchor tags shouldnt be used as buttons" I DO NOT GIVE A DAMNNN!!!!!!!!!!!!! -->
+                    <img src="media/music_player_icon.png" alt="Music Player Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Music Player (New!)</span>
+                        <span class="menu-full">Launch the Music Player</span>
+                    </div>
+                </a>
+                <a href="mailto:ethanmahlke@gmail.com" class="menu-item" id="menu-item-contact"> <!-- Mailto Contact-->
                     <img src="media/contact_icon.png" alt="Contact Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Contact</span>
@@ -117,8 +125,6 @@
                     </div>
                 </a>
                 <div class="menu-divider"></div> <!-- Divider -->
-                <br>
-                
             </div>
         </div>
     </div>
@@ -131,4 +137,9 @@
 <script src="scripts/icon_handler.js"></script>
 <script src="scripts/background_changer.js"></script>
 <script src="scripts/notification.js"></script>
+<script>
+  function openPlayer() {
+    window.open('/player/index.html', 'musicPlayer', 'width=350,height=300');
+  }
+</script>
 </html>
