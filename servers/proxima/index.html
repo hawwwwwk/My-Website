@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style> 
-        body {
-            background-color: white;
-        }
-    </style>
-    <link rel="icon" href="../../media/favicon.png">
-    <link rel="preload" href="../../media/background-hills-day.gif" as="image">
-    <link rel="preload" href="../../media/background-hills-night.gif" as="image">
-    <link rel="stylesheet" href="../../default.css">
+    <link rel="icon" href="/media/favicon.png">
+    <link rel="preload" href="/media/background-hills-day.gif" as="image">
+    <link rel="preload" href="/media/background-hills-night.gif" as="image">
+    <link rel="stylesheet" href="/default.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ethxn - Proxima</title>
@@ -23,74 +18,74 @@
                     <a href="proxima.png" target="_blank">
                         <img src="proxima.png" alt="Proxima" class="blog-image">
                     </a>
-                    <p class="blog-image-subtext">
-                        Proxima isn't being used for anything... <em>YET</em>.
-                    </p>
                 </div>
-
 
                 <h2 class="blog-subtitle">Specs</h2>
                 <ul class="blog-list">
                     <li>Model: Raspberry Pi 3 Model B+</li>
-                    <li>It has: USB ports I guess... maybe even an ethernet port...</li>
                 </ul>
-
 
                 <h2 class="blog-subtitle">Notes</h2>
                 <ul class="blog-list">
-                    <li>Proxima isn't being used for anything yet! I plan on moving a LOT of web-hosting-related-stuffs over to it in due time. 
-                        Enterprise servers + California heat != anything good. A low power option like Proxima is just what I need to move to for simple web stuff!</li>
+                    <li>Proxima powers my 3D printer at the moment using Octoprint.</li>
                 </ul>
 
             </div>
             <div class="blog-column-right menu-right"> <!-- Right Column -->
                 <a href="https://ethxn.xyz/" class="menu-item"> <!-- Home -->
-                    <img src="../../media/home_icon.png" alt="Home Icon" class="menu-icon">
+                    <img src="/media/home_icon.png" alt="Home Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Home</span>
                         <span class="menu-full">Back to Home...</span>
                     </div>
                 </a>
-                <a href="../" class="menu-item"> <!-- Home -->
-                    <img src="../../media/servers_icon.png" alt="Servers Icon" class="menu-icon">
+                <a href="" class="menu-item" id="menu-item-background"> <!-- Background Changer -->
+                    <img src="/media/background_icon.png" alt="Background Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Background</span>
+                        <span class="menu-full">Change Background</span>
+                    </div>
+                </a>
+                <a href="/servers/" class="menu-item"> <!-- Meet the Servers -->
+                    <img src="/media/servers_icon.png" alt="Servers Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Servers</span>
                         <span class="menu-full">Meet the Servers!</span>
                     </div>
                 </a>
                 <div class="menu-divider"></div> <!-- Divider -->
-                <a href="../sirius/" class="menu-item" id="menu-item-sirius"> <!-- Sirius - R610 -->
-                    <img src="../../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                <a href="/servers/sirius/" class="menu-item" id="menu-item-sirius"> <!-- Sirius - R610 -->
+                    <img src="/media/single_server_icon.png" alt="Server Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Sirius</span>
                         <span class="menu-full">Dell R610</span>
                     </div>
                 </a>
-                <a href="../antares/" class="menu-item" id="menu-item-antares"> <!-- Sirius - R610 -->
-                    <img src="../../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                <a href="/servers/antares/" class="menu-item" id="menu-item-antares"> <!-- Sirius - R610 -->
+                    <img src="/media/single_server_icon.png" alt="Server Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Antares</span>
                         <span class="menu-full">Dell R710</span>
                     </div>
                 </a>
-                <a href="../polaris/" class="menu-item" id="menu-item-antares"> <!-- Polaris -  -->
-                    <img src="../../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                <a href="/servers/polaris/" class="menu-item" id="menu-item-antares"> <!-- Polaris -  -->
+                    <img src="/media/single_server_icon.png" alt="Server Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Polaris</span>
                         <span class="menu-full">Ryzen 4600G & P100</span>
                     </div>
                 </a>
-                <a href="../proxima/" class="menu-item" id="menu-item-antares"> <!-- Proxima - Raspberry Pi -->
-                    <img src="../../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                <a href="/servers/proxima/" class="menu-item" id="menu-item-antares"> <!-- Proxima - Raspberry Pi -->
+                    <img src="/media/single_server_icon.png" alt="Server Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Proxima</span>
                         <span class="menu-full">Raspberry Pi 3 Model B+</span>
                     </div>
                 </a>
             </div>
-            
         </div>
     </div>
 </body>
-<script src="../../scripts/icon_handler.js"></script>
+<script src="/scripts/icon_handler.js"></script>
+<script src="/scripts/background_changer.js"></script>
 </html>
