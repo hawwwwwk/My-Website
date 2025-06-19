@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Winamp Music Player</title>
+  <style>
+    body {
+        background-color: #D4E5FA;
+    }
+  </style>
+  <script src="https://unpkg.com/webamp@1.5.0/built/webamp.bundle.min.js"></script>
+</head>
+  <div id="winamp-container"></div>
+  <script>
+    const webamp = new Webamp({
+      initialTracks: [
+        {
+          metaData: {
+            artist: "Bill Brown",
+            title: "Windows XP Tour intro"
+          },
+          url: "/media/sounds/tour-music/01 Windows XP Tour intro.mp3",
+          duration: 300
+        },
+        {
+          metaData: {
+            artist: "Bill Brown",
+            title: "Windows XP Tour 1"
+          },
+          url: "/media/sounds/tour-music/02 Windows XP Tour 1.mp3",
+          duration: 300
+        },
+        {
+          metaData: {
+            artist: "Bill Brown",
+            title: "Windows XP Tour 2"
+          },
+          url: "/media/sounds/tour-music/03 Windows XP Tour 2.mp3",
+          duration: 300
+        },
+        {
+          metaData: {
+            artist: "Bill Brown",
+            title: "Windows XP Tour 3"
+          },
+          url: "/media/sounds/tour-music/04 Windows XP Tour 3.mp3",
+          duration: 300
+        },
+        {
+          metaData: {
+            artist: "Bill Brown",
+            title: "Windows XP Tour 5"
+          },
+          url: "/media/sounds/tour-music/05 Windows XP Tour 5.mp3",
+          duration: 300
+        },
+        {
+          metaData: {
+            artist: "Bill Brown",
+            title: "Windows XP Tour 6"
+          },
+          url: "/media/sounds/tour-music/07 Windows XP Tour 6.mp3",
+          duration: 300
+        }
+      ],
+      skin: { url: "/media/skins/aero.wsz" }
+    });
+
+    webamp.renderWhenReady(document.getElementById("winamp-container"));
+  </script>
+</body>
+</html>

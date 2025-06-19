@@ -6,10 +6,10 @@
             background-color: white;
         }
     </style>
-    <link rel="icon" href="../../media/favicon.png">
-    <link rel="preload" href="../../media/background-hills-day.gif" as="image">
-    <link rel="preload" href="../../media/background-hills-night.gif" as="image">
-    <link rel="stylesheet" href="../../default.css">
+    <link rel="icon" href="/media/favicon.png">
+    <link rel="preload" href="/media/background-hills-day.gif" as="image">
+    <link rel="preload" href="/media/background-hills-night.gif" as="image">
+    <link rel="stylesheet" href="/default.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ethxn - Antares</title>
@@ -24,7 +24,7 @@
                         <img src="antares.png" alt="Antares" class="blog-image">
                     </a>
                     <p class="blog-image-subtext">
-                        Antares is my newest server! It runs my Unraid NAS, and a few other things.
+                        Anatres runs my Unraid JBOD.
                     </p>
                 </div>
 
@@ -32,26 +32,21 @@
                 <h2 class="blog-subtitle">Specs</h2>
                 <ul class="blog-list">
                     <li>Model: Dell PowerEdge R710</li>
-                    <li>CPU: 2x Intel Xeon L5630 SLBVD @ 2.13GHz</li>
-                    <li>RAM: 96GB DDR3 ECC</li>
-                    <li>Storage: 6x 4TB 7.2K SAS, 1x 1TB SATA SSD</li>
+                    <li>Storage: yes (36TB of SAS drives, ~24TB usable)</li>
                     <li>OS: Unraid OS</li>
-                </ul>
-
-
-                <h2 class="blog-subtitle">Services</h2>
-                <ul class="blog-list">
-                    <li>Just Nextcloud at the moment o(￣▽￣)ｄ</li>
                 </ul>
 
 
                 <h2 class="blog-subtitle">Notes</h2>
                 <ul class="blog-list">
-                    <li>Antares is named after the star Antares, the brightest star in the constellation Scorpius.</li>
-                    <li>Antares is the reason I made my naming scheme stars! I love astronomy, and I though would be a cute way to show that.</li>
-                    <li>Loaded with a total 24TB of HDD storage, with 2 of the drives being parity and a 1TB drive being cache. 16TB of usable storage isn't terrible!</li>
+                    <li>
+                        A lot of torrenting services and other random junk. Check <a href="https://status.ethxn.xyz/">my status page</a> 
+                        for a complete list of services :D
+                    </li>
+                    <li>
+                        Antares is now connected to Rho, my first disk shelf. It's an MD1200 !
+                    </li>
                 </ul>
-
 
                 <h2 class="blog-subtitle">Gallery</h2>
                 <div class="blog-image-container"> 
@@ -59,7 +54,7 @@
                         <img src="insides.jpg" alt="Inside view of Antares" class="blog-image">
                     </a>
                     <p class="blog-image-subtext">
-                        Antares insides! It's a bit of a mess, but it works.
+                        antares's insides...~ 
                     </p>
                 </div>
 
@@ -68,69 +63,57 @@
                         <img src="wack_ssd_placement.jpg" alt="Weird place for an SSd" class="blog-image">
                     </a>
                     <p class="blog-image-subtext">
-                        I had to put the SSD in a weird place because the fans were in the way. I'll give it a proper mount & SATA power soon... For now, it's just chilling.
+                        I had to put the SSD in a weird place because the fans were in the way. I'll give it a proper mount & SATA power soon... for now it's just chilling.
                     </p>
                 </div>
-
-                <div class="blog-image-container"> 
-                    <a href="broken_rack_ear.jpg".png target="_blank">
-                        <img src="broken_rack_ear.jpg" alt="Left rack ear is broken" class="blog-image">
-                    </a>
-                    <p class="blog-image-subtext">
-                        The left rack ear is broken, so I can't rack it yet. I'll wack it with a hammer soon!
-                    </p>
-                </div>
-
-                <div class="blog-image-container"> 
-                    <a href="booting.jpg" target="_blank">
-                        <img src="booting.jpg" alt="Booting into bios" class="blog-image">
-                    </a>
-                    <p class="blog-image-subtext">
-                        Booting into the BIOS!
-                    </p>
-                </div>
-
 
             </div>
             <div class="blog-column-right menu-right"> <!-- Right Column -->
                 <a href="https://ethxn.xyz/" class="menu-item"> <!-- Home -->
-                    <img src="../../media/home_icon.png" alt="Home Icon" class="menu-icon">
+                    <img src="/media/home_icon.png" alt="Home Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Home</span>
                         <span class="menu-full">Back to Home...</span>
                     </div>
                 </a>
-                <a href="../" class="menu-item"> <!-- Home -->
-                    <img src="../../media/servers_icon.png" alt="Servers Icon" class="menu-icon">
+                <a href="" class="menu-item" id="menu-item-background"> <!-- Background Changer -->
+                    <img src="/media/background_icon.png" alt="Background Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Background</span>
+                        <span class="menu-full">Change Background</span>
+                    </div>
+                </a>
+                <a href="/servers/" class="menu-item"> <!-- Meet the Servers -->
+                    <img src="/media/servers_icon.png" alt="Servers Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Servers</span>
                         <span class="menu-full">Meet the Servers!</span>
                     </div>
                 </a>
                 <div class="menu-divider"></div> <!-- Divider -->
-                <a href="../sirius/" class="menu-item" id="menu-item-sirius"> <!-- Sirius - R610 -->
-                    <img src="../../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                <a href="/servers/sirius/" class="menu-item" id="menu-item-sirius"> <!-- Sirius - R610 -->
+                    <img src="/media/single_server_icon.png" alt="Server Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Sirius</span>
                         <span class="menu-full">Dell R610</span>
                     </div>
                 </a>
-                <a href="../antares/" class="menu-item" id="menu-item-antares"> <!-- Sirius - R610 -->
-                    <img src="../../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                <a href="/servers/antares/" class="menu-item" id="menu-item-antares"> <!-- Sirius - R610 -->
+                    <img src="/media/single_server_icon.png" alt="Server Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Antares</span>
                         <span class="menu-full">Dell R710</span>
                     </div>
                 </a>
-                <a href="../polaris/" class="menu-item" id="menu-item-antares"> <!-- Polaris -  -->
-                    <img src="../../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                <a href="/servers/polaris/" class="menu-item" id="menu-item-antares"> <!-- Polaris -  -->
+                    <img src="/media/single_server_icon.png" alt="Server Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Polaris</span>
                         <span class="menu-full">Ryzen 4600G & P100</span>
                     </div>
                 </a>
-                <a href="../proxima/" class="menu-item" id="menu-item-antares"> <!-- Proxima - Raspberry Pi -->
-                    <img src="../../media/single_server_icon.png" alt="Server Icon" class="menu-icon">
+                <a href="/servers/proxima/" class="menu-item" id="menu-item-antares"> <!-- Proxima - Raspberry Pi -->
+                    <img src="/media/single_server_icon.png" alt="Server Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Proxima</span>
                         <span class="menu-full">Raspberry Pi 3 Model B+</span>
@@ -141,5 +124,6 @@
         </div>
     </div>
 </body>
-<script src="../../scripts/icon_handler.js"></script>
+<script src="/scripts/icon_handler.js"></script>
+<script src="/scripts/background_changer.js"></script>
 </html>

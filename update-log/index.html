@@ -6,10 +6,10 @@
             background-color: white;
         }
     </style>
-    <link rel="icon" href="../media/favicon.png">
-    <link rel="preload" href="../media/background-hills-day.gif" as="image">
-    <link rel="preload" href="../media/background-hills-night.gif" as="image">
-    <link rel="stylesheet" href="../default.css">
+    <link rel="icon" href="/media/favicon.png">
+    <link rel="preload" href="/media/background-hills-day.gif" as="image">
+    <link rel="preload" href="/media/background-hills-night.gif" as="image">
+    <link rel="stylesheet" href="/default.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ethxn - update log</title>
@@ -21,6 +21,22 @@
                 <h1 class="blog-title">Update Log</h1>
                 <div class="music-list">
                     <ul>
+                        <li>
+                            <span>The music player is now working (WINAMP)!</span>
+                            <span class="music-list-span-right">6/17/25</span>
+                        </li>
+                        <li>
+                            <span>made the change backgrounds consistent!</span>
+                            <span class="music-list-span-right">6/17/25</span>
+                        </li>
+                        <li>
+                            <span>removed Rho from the server list and added as a note on Antares, cleaned up Git</span>
+                            <span class="music-list-span-right">6/17/25</span>
+                        </li>
+                        <li>
+                            <span>random grammer fixes and added Rho to the server list</span>
+                            <span class="music-list-span-right">6/5/25</span>
+                        </li>
                         <li>
                             <span>updated spagwhetti webring embed</span>
                             <span class="music-list-span-right">3/18/25</span>
@@ -36,11 +52,7 @@
                             <span class="music-list-span-right">3/8/25</span>
                         </li>
                         <li>
-                            <span>joined <a href="https://rubybulbs.nekoweb.org/webring/index.html">ASCIIring</a> webring ❤️</span>
-                            <span class="music-list-span-right">3/8/25</span>
-                        </li>
-                        <li>
-                            <span>HUZZAH!!!!! GUESTBOOK IS WORKING AFTER 7 FUCKING MONTHS!!!!!! (also fixed other things)</span>
+                            <span>guestbook finally working~ (also fixed other things)</span>
                             <span class="music-list-span-right">3/8/25</span>
                         </li>
                         <li>
@@ -55,21 +67,30 @@
                             <span>fixed madi's button link and added the update log</span>
                             <span class="music-list-span-right">1/26/25</span>
                         </li>
-                        <p class="blog-image-subtext">Missing updates pre 1/26/25 :<</p>
+                        <p class="blog-image-subtext">
+                            Missing updates pre 1/26/25, check out the <a href="https://github.com/hawwwwwk/My-Website/commits/main/">Github</a> for updates back to June of '24
+                        </p>
                     </ul>
                 </div>
             </div>
             <div class="blog-column-right menu-right"> <!-- Right Column -->
                 <a href="https://ethxn.xyz/" class="menu-item"> <!-- Home -->
-                    <img src="../media/home_icon.png" alt="Home Icon" class="menu-icon">
+                    <img src="/media/home_icon.png" alt="Home Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">Home</span>
                         <span class="menu-full">Back to Home...</span>
                     </div>
                 </a>
+                <a href="" class="menu-item" id="menu-item-background"> <!-- Background Changer -->
+                    <img src="/media/background_icon.png" alt="Background Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Background</span>
+                        <span class="menu-full">Change Background</span>
+                    </div>
+                </a>
                 <div class="menu-divider"></div> <!-- Divider -->
-                <a href="../todo/" class="menu-item">
-                    <img src="../media/to-do_icon.png" alt="To-Do Icon" class="menu-icon">
+                <a href="/todo/" class="menu-item">
+                    <img src="/media/to-do_icon.png" alt="To-Do Icon" class="menu-icon">
                     <div class="menu-text">
                         <span class="menu-short">To-Do</span>
                         <span class="menu-full">To-Do List</span>
@@ -79,5 +100,6 @@
         </div>
     </div>
 </body>
-<script src="../scripts/icon_handler.js"></script>
+<script src="/scripts/icon_handler.js"></script>
+<script src="/scripts/background_changer.js"></script>
 </html>
