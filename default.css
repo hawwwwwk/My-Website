@@ -16,6 +16,22 @@ p {
     text-align: center;
 }
 
+.shadow-dance-text {
+    font-size: 1rem;
+    color: #000000;
+    text-shadow: 1px 1px 0 #ff005e, 1px 11px 0 #00d4ff;
+    animation: shadow-dance 2s infinite;
+}
+
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 2px 2px 0 #ff005e, 2px 2px 0 #00d4ff;
+    }
+    50% {
+        text-shadow: -2px -2px 0 #00d4ff, -2px -2px 0 #ff005e;
+    }
+}
+
 .screenname {
     color: #e53e32;
 }
