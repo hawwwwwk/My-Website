@@ -573,6 +573,8 @@ textarea {
 }
 
 .menu-item {
+    position: relative;
+    overflow: visible;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -770,4 +772,46 @@ textarea {
 
 .guestbook-icon {
     width: 20px;
+}
+
+.info-icon {
+    font-size: 11px;
+    background: #469FFB;
+    color: white;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor:help;
+    position: relative;
+    margin-left: 4px;
+    z-index: 9999;
+}
+
+.info-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* above icon */
+    left: -80%;
+    transform: translateX(-50%);
+    background: #ffffe1;
+    color: #000;
+    border: 1px solid #7b7b7b;
+    padding: 4px 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 99999;
+}
+
+.info-icon:hover::after,
+.info-icon:hover::before {
+    opacity: 1;
 }
