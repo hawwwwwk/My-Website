@@ -4,20 +4,42 @@ const form = document.getElementById('chatForm');
 const input = document.getElementById('msg');
 const avatar = document.getElementById('jobAvatar');
 const typingEl = document.getElementById('typingIndicator');
+const modeSelect = document.getElementById('modeSelect');
+const avatarCard = document.querySelector('.chat-avatar-card');
 
-modeSelect.addEventListener('change', () => {
-    currentMode = modeSelect.value;
-    avatar.parentElement.classList.remove(
-        'avatar-flirty-tint',
-        'avatar-angry-tint',
-        'avatar-sarcastic-tint'
-    );
-    if (currentMode === 'flirty') avatar.parentElement.classList.add('avatar-flirty-tint');
-    if (currentMode === 'angry') avatar.parentElement.classList.add('avatar-angry-tint');
-    if (currentMode === 'sarcastic') avatar.parentElement.classList.add('avatar-sarcastic-tint');
-});
+// mode state (safe default)
+let currentMode = (modeSelect && modeSelect.value) || 'default';
 
+// apply tint helper
+function applyAvatarTint(mode) {
+    if (!avatarCard) return;
+    avatarCard.classList.remove('avatar-flirty-tint', 'avatar-angry-tint', 'avatar-sarcastic-tint');
+    switch (mode) {
+        case 'flirty':
+            avatarCard.classList.add('avatar-flirty-tint');
+            break;
+        case 'angry':
+            avatarCard.classList.add('avatar-angry-tint');
+            break;
+        case 'sarcastic':
+            avatarCard.classList.add('avatar-sarcastic-tint');
+            break;
+        default:
+            // no tint
+            break;
+    }
+}
 
+// initialize tint for initial mode
+applyAvatarTint(currentMode);
+
+// react to mode changes (guarded)
+if (modeSelect) {
+    modeSelect.addEventListener('change', () => {
+        currentMode = modeSelect.value || 'default';
+        applyAvatarTint(currentMode);
+    });
+}
 
 function addMsg(text, who) {
     const wrap = document.createElement('div');
@@ -30,17 +52,17 @@ function addMsg(text, who) {
     log.scrollTop = log.scrollHeight;
 }
 
-// response logics
+// response logic (uses currentMode safely)
 function chooseResponse(userText) {
     switch (currentMode) {
         case 'flirty':
-            return "ngnnngnmnmns.. .. job .hroak...";
+            return "nnngnmnmng,.,., .. *job moan*";
         case 'angry':
-            return "🐺 GRRRR !!!!";
+            return "🐺 DON'T......... DON'T EVEN TRY THAT BUSTER.............";
         case 'sarcastic':
-            return "okay";
+            return "fascinating.";
         default:
-            return "shut up, nerd.";
+            return "shut up nerd";
     }
 }
 
@@ -70,18 +92,24 @@ function wait(ms) {
 // avatar movement
 let bopTimer = null;
 function microBop() {
-    avatar.classList.remove('bop');
-    const dx = (Math.random() * 2 - 1) * 2.0;
-    const dy = (Math.random() * 2 - 1) * 2.0;
-    const rot = (Math.random() * 2 - 1) * 1.2;
+    if (!avatar) return;
+
+    const dx = (Math.random() * 2 - 1) * 3.5; 
+    const dy = (Math.random() * 2 - 1) * 3.5;
+    const rot = (Math.random() * 2 - 1) * 2; 
     avatar.style.transform = `translate(${dx}px, ${dy}px) rotate(${rot}deg)`;
 
+    // trigger bounce scale animation
+    avatar.classList.remove('bop');
+    void avatar.offsetWidth;
     avatar.classList.add('bop');
+
     clearTimeout(bopTimer);
     bopTimer = setTimeout(() => {
         avatar.style.transform = 'translate(0,0) rotate(0)';
-    }, 90);
+    }, 120);
 }
+
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();

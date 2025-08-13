@@ -399,13 +399,16 @@ textarea {
 }
 
 .chat-avatar.bop {
-    animation: bop 80ms ease;
+    animation: bop-scale 100ms ease;
 }
-@keyframes bop {
-    0% { transform: translate(0, 0) rotate(0); }
-    40% { transform: translate(-1px, -1px) rotate(-.2deg); }
-    100% { transform: translate(0, 0) rotate(0); }
+
+@keyframes bop-scale {
+    0%   { transform: scale(1) }
+    30%  { transform: scale(1.08, 0.92) }
+    60%  { transform: scale(0.96, 1.04) }
+    100% { transform: scale(1) }
 }
+
 
 @media (max-width: 700px) {
     .chat-layout {
