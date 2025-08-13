@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ethxn - Job Horak Chatbot</title>
+    <link rel="icon" href="/media/favicon.png">
+    <link rel="preload" href="/media/background-hills-day.gif" as="image">
+    <link rel="preload" href="/media/background-hills-night.gif" as="image">
+    <link rel="stylesheet" href="/default.css">
+</head>
+<body>
+    <div class="blog-post-menu">
+        <div class="menu-content">
+            <div class="blog-column-left menu-left">
+                <h1 class="blog-title">Job Horak Chatbot</h1>
+
+                <section class="chat-section">
+                    <div class="chat-layout">
+                        <!-- avatar -->
+                        <aside class="chat-avatar-card">
+                            <img id="jobAvatar" class="chat-avatar" alt="Job Horak" src="job.png" />
+                            <div style="font-weight:bold; margin-top:6px;">Job Horak 🤖</div>
+                            <div class="chat-caption">ONLINE</div>
+                            <label for="modeSelect" class="mode-label">Mode:</label>
+                            <select id="modeSelect" class="mode-select">
+                                <option value="default">Default Job</option>
+                                <option value="flirty">Flirty Job</option>
+                                <option value="angry">Angry Job</option>
+                                <option value="sarcastic">Sarcastic Job</option>
+                            </select>
+
+
+                        </aside>
+
+                        <!-- chat window -->
+                        <section class="chat-window-card">
+                            <header class="chat-header">
+                                <span>Job AI</span>
+                                <div class="typing" id="typingIndicator" style="visibility:hidden">
+                                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                                </div>
+                            </header>
+                            <div class="chat-log" id="log" aria-live="polite"></div>
+                            <form class="chat-input" id="chatForm">
+                                <input id="msg" type="text" placeholder="say something to him..." autocomplete="off" required />
+                                <button type="submit" aria-label="Send">Send</button>
+                            </form>
+                        </section>
+                    </div>
+                </section>
+            </div>
+
+            <div class="blog-column-right menu-right">
+                <a href="https://ethxn.xyz/" class="menu-item">
+                    <img src="/media/home_icon.png" alt="Home Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Home</span>
+                        <span class="menu-full">Back to Home...</span>
+                    </div>
+                </a>
+                <a href="#" class="menu-item" id="menu-item-background">
+                    <img src="/media/background_icon.png" alt="Background Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Background</span>
+                        <span class="menu-full">Change Background</span>
+                    </div>
+                </a>
+                <div class="menu-divider"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- If you want the background button to work here too, include your background_changer.js below or inline a tiny version. -->
+    <!-- <script src="/scripts/background_changer.js"></script> -->
+</body>
+<script src="/scripts/icon_handler.js"></script>
+<script src="/scripts/background_changer.js"></script>
+<script src="script.js"></script>
+</html>
