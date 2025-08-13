@@ -322,16 +322,19 @@ textarea {
 .avatar-flirty-tint::after {
     background-color: rgba(255, 105, 180, 0.6); /* hot pink */
     opacity: 1;
+    transition: opacity 0.2s ease;
 }
 
 .avatar-angry-tint::after {
     background-color: rgba(255, 0, 0, 0.5); /* bright red */
     opacity: 1;
+    transition: opacity 0.2s ease;
 }
 
 .avatar-sarcastic-tint::after {
     background-color: rgba(255, 140, 0, 0.5); /* deep orange */
     opacity: 1;
+    transition: opacity 0.2s ease;
 }
 
 
