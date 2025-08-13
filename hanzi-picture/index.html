@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+        body {
+            background-color: white;
+        }
+    </style>
+    <link rel="icon" href="/media/favicon.png">
+    <link rel="preload" href="/media/background-hills-day.gif" as="image">
+    <link rel="preload" href="/media/background-hills-night.gif" as="image">
+    <link rel="stylesheet" href="/default.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ethxn - Hanzi Picture</title>
+</head>
+<body>
+    <div class="blog-post-menu">
+        <div class="menu-content">
+            <div class="blog-column-left menu-left"> <!-- Left Column -->
+                <h1 class="blog-title">Hanzi Picture</h1>
+                <p>
+                    <em>Hiya!</em>
+                    <br><br>
+                    Hanzi Picture is a project I have been slowly chipping at for a while, and it's still far from completion. 
+                    <br><br>
+                    The goal of this project is to have an image -> ascii art converter, but using Hanzi/Kana characters... something like this:
+                    <img src="/hanzi-picture/ascii_art_example.png" alt="ascii art example">
+                    <br><br>
+                    My original project was written in Java (for some reason), and then converted to Python, and now will be converted
+                    into something that can be used on a webpage for accessibility (so the user doesn't need to build/install anything...)
+                    <br>
+                    <a href="https://github.com/hawwwwwk/img-hanzi" target="_blank">https://github.com/hawwwwwk/img-hanzi</a>
+                    <br><br>
+                    <img src="banner.png" alt="original pic" style="width: 400px;">
+                    <br>
+                    <img src="original project example.png" alt="original pic" style="width: 400px;">
+                    <br><br>
+                    The original project would use "stroke weight", determinant on the brightness of the pixels it was copying. I'm hoping
+                    that I can have the program look for edges and try to draw based on that, using the curvature of the characters to draw
+                    shapes (like in the example picture!)
+                    <br><br>
+                    The scope of this project makes me worried that I'll never finish it, but I've been slowly pushing.
+                </p>
+                <img src="construction_blinkee.gif" alt="contruction blinkee" class="blinkee">
+
+            </div>
+            <div class="blog-column-right menu-right"> <!-- Right Column -->
+                <a href="https://ethxn.xyz/" class="menu-item"> <!-- Home -->
+                    <img src="/media/home_icon.png" alt="Home Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Home</span>
+                        <span class="menu-full">Back to Home...</span>
+                    </div>
+                </a>
+                <a href="" class="menu-item" id="menu-item-background"> <!-- Background Changer -->
+                    <img src="/media/background_icon.png" alt="Background Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">Background</span>
+                        <span class="menu-full">Change Background</span>
+                    </div>
+                </a>
+                <div class="menu-divider"></div> <!-- Divider -->
+                <a href="/todo/" class="menu-item">
+                    <img src="/media/to-do_icon.png" alt="To-Do Icon" class="menu-icon">
+                    <div class="menu-text">
+                        <span class="menu-short">To-Do</span>
+                        <span class="menu-full">To-Do List</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/scripts/icon_handler.js"></script>
+<script src="/scripts/background_changer.js"></script>
+</html>
