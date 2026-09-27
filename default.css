@@ -704,6 +704,22 @@ textarea {
     z-index: 1;
 }
 
+ #menu-item-sirius {
+    position: relative;
+    overflow: hidden;
+}
+
+#menu-item-sirius .cell-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    pointer-events: none;
+    z-index: 2;
+}
+
 #profile-top-right {
     width: 600px;
     background-color: #FFF;
