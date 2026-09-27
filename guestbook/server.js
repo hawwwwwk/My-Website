@@ -19,7 +19,8 @@ const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    database: process.env.DB_NAME,
+    charset: 'utf8mb4'
 });
 
 db.connect(err => {
@@ -28,13 +29,6 @@ db.connect(err => {
     }
     console.log('Connected to MySQL');
 });
-
-// this is so vulnerable 
-
-// sanitize user input
-const sanitizeInput = (input) => {
-    return input.replace(/</g, "&lt;").replace(/>/g, "&gt;").trim(); // Prevents XSS
-};
 
 // GET; retrieve all guestbook entries
 app.get('/entries', (req, res) => {
@@ -49,32 +43,34 @@ app.get('/entries', (req, res) => {
 
 // POST; submit new guestbook entry
 app.post('/submit', (req, res) => {
-    let { screenname, website, message } = req.body;
+    const { screenname, website, message } = req.body || {};
     
     // validate required fields
-    if (!screenname || !message) {
+    if (typeof screenname !== 'string' || screenname.trim() === '' ||
+        typeof message !== 'string' || message.trim() === '') {
         return res.status(400).send('Screenname and message are required');
     }
 
-    // sanitize input
-    screenname = sanitizeInput(screenname);
-    website = sanitizeInput(website);
-    message = sanitizeInput(message);
+    if (website !== undefined && website !== null && typeof website !== 'string') {
+        return res.status(400).send('Invalid URL');
+    }
+    const websiteValue = website || null;
 
     // limit character length to prevent abuse
-    if (screenname.length > 50 || message.length > 255) {
+    if (screenname.length > 50 || message.length > 255 ||
+        (websiteValue !== null && websiteValue.length > 255)) {
         return res.status(400).send('Input too long');
     }
 
     // validate website URL
     const validURL = /^(https?:\/\/)?([\w-]+(\.[\w-]+)+)(\/[\w-]*)*$/;
-    if (website && !validURL.test(website)) {
+    if (websiteValue && !validURL.test(websiteValue)) {
         return res.status(400).send('Invalid URL');
     }
 
     // use a prepared statement to prevent SQL injection
     const query = "INSERT INTO entries (screenname, website, message) VALUES (?, ?, ?)";
-    const values = [screenname, website, message];
+    const values = [screenname, websiteValue, message];
 
     db.execute(query, values, (err, result) => {
         if (err) {

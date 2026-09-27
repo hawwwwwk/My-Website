@@ -1,10 +1,14 @@
-CREATE DATABASE guestbook;
+CREATE DATABASE IF NOT EXISTS guestbook;
 USE guestbook;
 
-CREATE TABLE entries (
+ALTER DATABASE guestbook CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS entries (
     id INT AUTO_INCREMENT PRIMARY KEY,
     screenname VARCHAR(100) NOT NULL,
     website VARCHAR(255) NULL,
     message TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+ALTER TABLE entries CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

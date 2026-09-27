@@ -50,23 +50,41 @@ function loadEntries() {
     })
     .then(entries => {
         const container = document.getElementById('guestbook-entries');
-        container.innerHTML = ''; // clear old entries
+        container.replaceChildren();
 
         entries.forEach(entry => {
             const entryDiv = document.createElement('div');
             entryDiv.classList.add('guestbook-entry');
-            entryDiv.innerHTML = `
-                <strong class="screenname">${escapeHtml(entry.screenname)}</strong> `;
-            if (entry.website?.includes('http')) {
-                entryDiv.innerHTML = entryDiv.innerHTML + `<a href="${escapeHtml(entry.website)}" target="_blank">(${escapeHtml(entry.website)})</a> : `;
-            } else if (entry.website) {
-                entryDiv.innerHTML = entryDiv.innerHTML + `(${escapeHtml(entry.website)}) : `;
-            } else {
-                entryDiv.innerHTML = entryDiv.innerHTML + ` : `;
+            const screenname = document.createElement('strong');
+            screenname.classList.add('screenname');
+            screenname.textContent = entry.screenname;
+            entryDiv.append(screenname, document.createTextNode(' '));
+
+            if (entry.website) {
+                const websiteText = `(${entry.website})`;
+                if (/^https?:\/\//i.test(entry.website)) {
+                    const websiteLink = document.createElement('a');
+                    websiteLink.href = entry.website;
+                    websiteLink.target = '_blank';
+                    websiteLink.rel = 'noopener noreferrer';
+                    websiteLink.textContent = websiteText;
+                    entryDiv.append(websiteLink);
+                } else {
+                    entryDiv.append(document.createTextNode(websiteText));
+                }
             }
-            entryDiv.innerHTML = entryDiv.innerHTML + `${escapeHtml(entry.message)}<br>
-            <small>Posted on ${new Date(entry.created_at).toDateString()}</small>
-            <br><div class="menu-divider"></div>`;
+
+            entryDiv.append(document.createTextNode(' : '));
+            entryDiv.append(document.createTextNode(entry.message));
+            entryDiv.append(document.createElement('br'));
+
+            const postedDate = document.createElement('small');
+            postedDate.textContent = `Posted on ${new Date(entry.created_at).toDateString()}`;
+            entryDiv.append(postedDate, document.createElement('br'));
+
+            const divider = document.createElement('div');
+            divider.classList.add('menu-divider');
+            entryDiv.append(divider);
             container.appendChild(entryDiv);
         });
     })
@@ -76,9 +94,3 @@ function loadEntries() {
     });
 }
 
-// util to escape HTML and prevent XSS attacks :3
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
