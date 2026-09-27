@@ -3,9 +3,9 @@
 
 <channel>
   <atom:link href="https://ethxn.xyz/feed.xml" rel="self" type="application/rss+xml" />
-  <title>Ethxn's Blog</title>
+  <title>ethxn's blog</title>
   <link>https://www.ethxn.xyz/</link>
-  <description>my little rambling corner of the WWW...</description>
+  <description>rambling corner</description>
   <item>
     <title>A Blog is Born</title>
     <pubDate>Wed, 14 Aug 2024 15:40:00 -0800</pubDate>
@@ -19,6 +19,13 @@
     <link>https://www.ethxn.xyz/blog/posts/the_guestbook_is_finally_up.html</link>
     <guid>https://www.ethxn.xyz/blog/posts/the_guestbook_is_finally_up.html</guid>
     <description>jesus christ that took forever :sob:</description>
+  </item>
+  <item>
+    <title>i might have to ruin my life</title>
+    <pubDate>Mon, 16 Feb 2026 19:00:00 -0800</pubDate>
+    <link>https://www.ethxn.xyz/blog/posts/i_might_have_to_ruin_my_life.html</link>
+    <guid>https://www.ethxn.xyz/blog/posts/i_might_have_to_ruin_my_life.html</guid>
+    <description>...to make it mine</description>
   </item>
 </channel>
 </rss> 
