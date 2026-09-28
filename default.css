@@ -49,6 +49,27 @@ p {
     height: 31px;
 }
 
+.link-button {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.link-button img {
+    transition: transform 160ms ease;
+}
+
+.link-button:hover img,
+.link-button:focus-visible img {
+    transform: scale(1.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .link-button img {
+        transition: none;
+    }
+}
+
 
 .menu {
     width: 500px;
@@ -746,6 +767,8 @@ textarea {
     font-family: Tahoma, sans-serif;
     display: none; 
     z-index: 1000;
+    box-sizing: border-box;
+    pointer-events: none;
 }
 
 /* for speech bubble effect */
