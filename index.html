@@ -15,135 +15,136 @@
     <title>ethxn</title>
 </head>
 <body> 
-    <div class="menu">
-        <div class="menu-header">
-            <div class="user-icon-container">
-                <div class="user-icon-border">
-                    <img src="media/user_icon.jpg" alt="User Icon" class="user-icon"> <!-- User Icon -->
+    <main class="home-page-content">
+        <div class="menu">
+            <div class="menu-header">
+                <div class="user-icon-container">
+                    <div class="user-icon-border">
+                        <img src="media/user_icon.jpg" alt="User Icon" class="user-icon"> <!-- User Icon -->
+                    </div>
+                </div>
+                Ethan (aka Iris)
+                <div class="orange-divider"></div> <!-- Top Orange Divider -->
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-column menu-left">
+                    <a href="about/" class="menu-item">
+                        <img src="media/about_icon.png" alt="About Me Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">About</span>
+                            <span class="menu-full">Me and This Site</span>
+                        </div>
+                    </a>
+                    <a href="guestbook/public/" class="menu-item">
+                        <img src="media/guestbook_icon.png" alt="Guestbook Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Guestbook</span>
+                            <span class="menu-full">Sign the Guestbook!</span>
+                        </div>
+                    </a>
+                    <a href="blog/" class="menu-item">
+                        <img src="media/blog_icon.png" alt="Blog Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Blog</span>
+                            <span class="menu-full">View my Blog</span>
+                        </div>
+                    </a>
+                    <a href="music/" class="menu-item">
+                        <img src="media/music_icon.png" alt="Music Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Music</span>
+                            <span class="menu-full">Music Folder</span>
+                        </div>
+                    </a>
+                    <a href="servers/" class="menu-item">
+                        <img src="media/servers_icon.png" alt="Servers Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Servers</span>
+                            <span class="menu-full">Meet the Servers!</span>
+                        </div>
+                    </a>
+                    <a href="links/" class="menu-item">
+                        <img src="media/wip_icon.png" alt="Buttons Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Links</span>
+                            <span class="menu-full">Buttons and Links</span>
+                        </div>
+                    </a>
+                    <div class="menu-divider"></div> <!-- Divider -->
+                    <a href="update-log/" class="menu-item" id="menu-item-status">
+                        <img src="media/updatelog_icon.png" alt="Update Log Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Update Log</span>
+                            <span class="menu-full">Updates to Website</span>
+                        </div>
+                    </a>
+                    <a href="todo/" class="menu-item">
+                        <img src="media/to-do_icon.png" alt="To-Do Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">To-Do</span>
+                            <span class="menu-full">To-Do List</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/hawwwwwk/" target="_blank" class="menu-item" id="menu-item-github">
+                        <img src="media/github_icon.png" alt="GitHub Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Repositories</span>
+                            <span class="menu-full">Github</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu-column menu-right"> <!-- Right Column -->
+                    <a href="https://status.ethxn.xyz/" class="menu-item" id="menu-item-status"> <!-- Status Button -->
+                        <img src="media/status_icon.gif" alt="Status Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Status</span>
+                            <span class="menu-full">Status of Services</span>
+                        </div>
+                    </a>
+                    <a href="" class="menu-item" id="menu-item-background"> <!-- Background Changer -->
+                        <img src="media/background_icon.png" alt="Background Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Background</span>
+                            <span class="menu-full">Change Background</span>
+                        </div>
+                    </a>
+                    <a href="" class="menu-item" id="menu-item-player" onclick="openPlayer(); return false;">
+                        <!-- Music Player -->
+                        <img src="media/music_player_icon.png" alt="Music Player Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Music Player</span>
+                            <span class="menu-full">
+                                Launch the Music Player
+                                <span class="info-icon" data-tooltip="Music by Bill Brown">i</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="socials/" class="menu-item">
+                        <img src="media/socials-icon.png" alt="Socials Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Socials</span>
+                            <span class="menu-full">Social Media Profiles</span>
+                        </div>
+                    </a>
+                    <a href="https://discord.gg/JPMyepb3vb" class="menu-item" id="menu-item-contact"> <!-- Discord Server-->
+                        <img src="media/discord_icon.png" alt="Discord Icon" class="menu-icon">
+                        <div class="menu-text">
+                            <span class="menu-short">Discord</span>
+                            <span class="menu-full">Discord Server!</span>
+                        </div>
+                    </a>
+                    <div class="menu-divider"></div> <!-- Divider -->
                 </div>
             </div>
-            Ethan (aka Iris)
-            <div class="orange-divider"></div> <!-- Top Orange Divider -->
         </div>
-        
-        <div class="menu-content">
-            <div class="menu-column menu-left">
-                <a href="about/" class="menu-item">
-                    <img src="media/about_icon.png" alt="About Me Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">About</span>
-                        <span class="menu-full">Me and This Site</span>
-                    </div>
-                </a>
-                <a href="guestbook/public/" class="menu-item">
-                    <img src="media/guestbook_icon.png" alt="Guestbook Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Guestbook</span>
-                        <span class="menu-full">Sign the Guestbook!</span>
-                    </div>
-                </a>
-                <a href="socials/" class="menu-item">
-                    <img src="media/socials-icon.png" alt="Socials Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Socials</span>
-                        <span class="menu-full">My Social Media Profiles</span>
-                    </div>
-                </a>
-                <a href="blog/" class="menu-item">
-                    <img src="media/blog_icon.png" alt="Blog Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Blog</span>
-                        <span class="menu-full">View my Blog</span>
-                    </div>
-                </a>
-                <a href="music/" class="menu-item">
-                    <img src="media/music_icon.png" alt="Music Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Music</span>
-                        <span class="menu-full">Music Folder</span>
-                    </div>
-                </a>
-                <a href="servers/" class="menu-item">
-                    <img src="media/servers_icon.png" alt="Servers Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Servers</span>
-                        <span class="menu-full">Meet the Servers!</span>
-                    </div>
-                </a>
-                <a href="links/" class="menu-item">
-                    <img src="media/wip_icon.png" alt="Buttons Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Links</span>
-                        <span class="menu-full">Buttons and Links</span>
-                    </div>
-                </a>
-                <div class="menu-divider"></div> <!-- Divider -->
-                <a href="update-log/" class="menu-item" id="menu-item-status">
-                    <img src="media/updatelog_icon.png" alt="Update Log Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Update Log</span>
-                        <span class="menu-full">Updates to Website</span>
-                    </div>
-                </a>
-                <a href="todo/" class="menu-item">
-                    <img src="media/to-do_icon.png" alt="To-Do Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">To-Do</span>
-                        <span class="menu-full">To-Do List</span>
-                    </div>
-                </a>
-                <a href="https://github.com/hawwwwwk/" target="_blank" class="menu-item" id="menu-item-github">
-                    <img src="media/github_icon.png" alt="GitHub Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Repositories</span>
-                        <span class="menu-full">Github</span>
-                    </div>
-                </a>
+        <section class="latest-blog-window" aria-labelledby="latest-blog-heading">
+            <h2 class="latest-blog-header" id="latest-blog-heading">Latest Blog Post</h2>
+            <div class="latest-blog-content" id="latest-blog-post" aria-live="polite">
+                <span>Loading latest post...</span>
             </div>
-            <div class="menu-column menu-right"> <!-- Right Column -->
-                <a href="https://status.ethxn.xyz/" class="menu-item" id="menu-item-status"> <!-- Status Button -->
-                    <img src="media/status_icon.gif" alt="Status Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Status</span>
-                        <span class="menu-full">Status of Services</span>
-                    </div>
-                </a>
-                <a href="" class="menu-item" id="menu-item-background"> <!-- Background Changer -->
-                    <img src="media/background_icon.png" alt="Background Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Background</span>
-                        <span class="menu-full">Change Background</span>
-                    </div>
-                </a>
-                <a href="" class="menu-item" id="menu-item-player" onclick="openPlayer(); return false;">
-                    <!-- Music Player -->
-                    <img src="media/music_player_icon.png" alt="Music Player Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Music Player</span>
-                        <span class="menu-full">
-                            Launch the Music Player
-                            <span class="info-icon" data-tooltip="Music by Bill Brown">i</span>
-                        </span>
-                    </div>
-                </a>
-                <a href="mailto:ethxn.xyz@proton.me" class="menu-item" id="menu-item-contact"> <!-- Mailto Contact-->
-                    <img src="media/contact_icon.png" alt="Contact Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Contact</span>
-                        <span class="menu-full">Contact Me</span>
-                    </div>
-                </a>
-                <a href="https://discord.gg/JPMyepb3vb" class="menu-item" id="menu-item-contact"> <!-- Discord Server-->
-                    <img src="media/discord_icon.png" alt="Discord Icon" class="menu-icon">
-                    <div class="menu-text">
-                        <span class="menu-short">Discord</span>
-                        <span class="menu-full">Discord Server!</span>
-                    </div>
-                </a>
-                <div class="menu-divider"></div> <!-- Divider -->
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <div id="notification" class="notification" data-welcome>
         <div class="notification-title"></div>
         <div class="notification-subtext"></div>
@@ -153,6 +154,7 @@
 <script src="scripts/icon_handler.js"></script>
 <script src="scripts/background_changer.js"></script>
 <script src="scripts/notification.js"></script>
+<script src="scripts/latest_blog_post.js"></script>
 <script>
   function openPlayer() {
     window.open('/player/index.html', 'musicPlayer', 'width=300,height=350');
