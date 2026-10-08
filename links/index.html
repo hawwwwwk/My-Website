@@ -34,16 +34,16 @@
                 </div>
                     
                 <h2 class="blog-subtitle">User Buttons</h2>
-                <a href="https://deadgirl.dev/"><img src="https://deadgirl.dev/assets/deadgirl-button.gif" alt="madi's site"class="madi-button"class="button"></a>
-                <a href="https://jbcarreon123.nekoweb.org"><img src="https://jbcarreon123.nekoweb.org/sitebutton.png" alt="jb's site" style="image-rendering: pixelated;"class="button"/></a>
-                <a href="https://avrelsleepy.nekoweb.org/"><img src="https://avrelsleepy.nekoweb.org/assets/webbuttons/avrel.png" alt="avrel's site (under construction, link brokey)"class="button"></a>
-                <a href="https://spaghetti.nekoweb.org" target="_blank"><img src="https://spaghetti.nekoweb.org/img/btn.png"></a> 
-                <a href="https://theoliveoli.blahaj.land/"><img src="../media/theoliveoli_button.png" alt="theoliveoli's site" class="button"></a>
-                <a href="https://olivia.nekoweb.org/"><img src="https://olivia.nekoweb.org/images/badge.png" alt="olivia's site" class="button"></a>
+                <a href="https://deadgirl.dev/" class="link-button" data-thought="let's all love lain!"><img src="https://deadgirl.dev/assets/deadgirl-button.gif" alt="madi's site" class="button"></a>
+                <a href="https://jbc.lol" class="link-button"><img src="https://jbc.lol/imgs/buttons/jbtn.svg" alt="jb's site" style="image-rendering: pixelated;"/></a>
+                <a href="https://avrelsleepy.nekoweb.org/" class="link-button"><img src="https://avrelsleepy.nekoweb.org/assets/webbuttons/avrel.png" alt="avrel's site (link brokey)" class="button"></a>
+                <a href="https://spaghetti.nekoweb.org" target="_blank" class="link-button"><img src="https://spaghetti.nekoweb.org/button.png" alt="spaghetti's site"></a>
+                <a href="https://theoliveoli.blahaj.land/" class="link-button"><img src="../media/theoliveoli_button.png" alt="theoliveoli's site" class="button"></a>
+                <a href="https://olivia.nekoweb.org/" class="link-button"><img src="https://olivia.nekoweb.org/images/badge.png" alt="olivia's site (link brokey)" class="button"></a>
                 <h2 class="blog-subtitle">Misc.</h2>
-                <a class="cool-button"><img src="../media/popipo.gif" alt="popipo"></a>
-                <a class="cool-button"><img src="../media/mes003.gif" alt="mesmirizer"></a>
-                <a class="cool-button"><img src="../media/Teto_Button.gif" alt="teto territory!"></a>
+                <a class="cool-button link-button"><img src="../media/popipo.gif" alt="popipo"></a>
+                <a class="cool-button link-button"><img src="../media/mes003.gif" alt="mesmirizer"></a>
+                <a class="cool-button link-button"><img src="../media/Teto_Button.gif" alt="teto territory!"></a>
             </div>
             <div class="blog-column-right menu-right"> <!-- Right Column -->
                 <a href="https://ethxn.xyz/" class="menu-item"> <!-- Home -->
@@ -64,8 +64,12 @@
             </div>
         </div>
     </div>
+    <div id="notification" class="notification" aria-live="polite" aria-atomic="true">
+        <div class="notification-title"></div>
+        <div class="notification-subtext"></div>
+    </div>
 </body>
 <script src="/scripts/icon_handler.js"></script>
 <script src="/scripts/background_changer.js"></script>
-<script src="blog.js"></script>
+<script src="/scripts/notification.js"></script>
 </html>

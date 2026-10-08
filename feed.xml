@@ -3,9 +3,9 @@
 
 <channel>
   <atom:link href="https://ethxn.xyz/feed.xml" rel="self" type="application/rss+xml" />
-  <title>Ethxn's Blog</title>
+  <title>ethxn's blog</title>
   <link>https://www.ethxn.xyz/</link>
-  <description>my little rambling corner of the WWW...</description>
+  <description>rambling corner</description>
   <item>
     <title>A Blog is Born</title>
     <pubDate>Wed, 14 Aug 2024 15:40:00 -0800</pubDate>
