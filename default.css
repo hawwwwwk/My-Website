@@ -108,18 +108,19 @@ p {
     border-right: 1px solid #E0E0E0;
 }
 
-.guestbook-entries-menu {
+.guestbook-entries-menu,
+.blog-comments-menu {
     width: 50%;
     background-color: #FFF;
     border: 2px solid #0078D7;
     box-shadow: 0 0 2px rgba(0, 0, 0, 1);
     border-radius: 5px;
     overflow: hidden;
+    margin: 25px auto;
+}
+
+.guestbook-entries-menu {
     padding: 10px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .guestbook-entries {
@@ -202,6 +203,54 @@ textarea {
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.blog-comments-menu {
+    width: calc(50% + 20px);
+}
+
+.blog-comments-content {
+    padding: 10px;
+}
+
+.blog-comments-menu > .menu-header {
+    margin-top: 0;
+}
+
+.blog-comments-status {
+    min-height: 1em;
+    text-align: left;
+}
+
+.blog-comment-form {
+    display: grid;
+    gap: 6px;
+    max-width: 500px;
+}
+
+.blog-comment-form label {
+    font-weight: bold;
+}
+
+.blog-comment-form input,
+.blog-comment-form textarea {
+    box-sizing: border-box;
+    font: 14px Tahoma, sans-serif;
+    padding: 7px;
+    width: 100%;
+}
+
+.blog-comment-form textarea {
+    resize: vertical;
+}
+
+.blog-comment-form button {
+    justify-self: start;
+    background-color: #D4E5FA;
+    border: 1px solid #0078D7;
+    border-radius: 4px;
+    font: bold 12px Tahoma, sans-serif;
+    padding: 6px 10px;
 }
 
 .blog-image-container {

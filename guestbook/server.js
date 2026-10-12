@@ -7,12 +7,12 @@ const cors = require('cors'); // I HATE YOU CORS YOU WASTED SO MUCH OF MY TIME
 const app = express();
 
 app.use(cors({
-    origin: 'http://ethxn.xyz',
-    methods: 'GET,POST', 
-    credentials: true 
+    origin: ['http://ethxn.xyz', 'https://ethxn.xyz'],
+    methods: ['GET', 'POST'],
+    credentials: true
 }));
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '10kb' }));
 app.use(express.static('public'));
 
 const db = mysql.createConnection({
@@ -79,6 +79,53 @@ app.post('/submit', (req, res) => {
         }
         res.status(200).send('Entry saved');
     });
+});
+
+// GET; retrieve comments for a blog post
+app.get('/comments/:postSlug', (req, res) => {
+    const postSlug = req.params.postSlug;
+    if (!postSlug || postSlug.length > 255) {
+        return res.status(400).send('Invalid post');
+    }
+
+    db.execute(
+        'SELECT id, screenname, message, created_at FROM comments WHERE post_slug = ? ORDER BY created_at ASC, id ASC',
+        [postSlug],
+        (err, results) => {
+            if (err) {
+                console.error('Database error:', err);
+                return res.status(500).send('Error retrieving comments');
+            }
+            res.json(results);
+        }
+    );
+});
+
+// POST; publish a comment immediately
+app.post('/comments', (req, res) => {
+    const { postSlug, screenname, message } = req.body || {};
+
+    if (typeof postSlug !== 'string' || postSlug.trim() === '' ||
+        typeof screenname !== 'string' || screenname.trim() === '' ||
+        typeof message !== 'string' || message.trim() === '') {
+        return res.status(400).send('Post, name, and comment are required');
+    }
+
+    if (postSlug.length > 255 || screenname.trim().length > 50 || message.trim().length > 1000) {
+        return res.status(400).send('Input too long');
+    }
+
+    db.execute(
+        'INSERT INTO comments (post_slug, screenname, message) VALUES (?, ?, ?)',
+        [postSlug.trim(), screenname.trim(), message.trim()],
+        (err, result) => {
+            if (err) {
+                console.error('Database error:', err);
+                return res.status(500).send('Error saving comment');
+            }
+            res.status(201).json({ id: result.insertId });
+        }
+    );
 });
 
 app.listen(3000, '0.0.0.0', () => {
