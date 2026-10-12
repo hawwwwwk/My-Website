@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (comments.length === 0) {
             const empty = document.createElement('div');
             empty.className = 'guestbook-entry';
-            empty.textContent = 'No comments yet. Be the first to leave one!';
+            empty.textContent = 'No comments yet.';
             list.appendChild(empty);
             return;
         }
