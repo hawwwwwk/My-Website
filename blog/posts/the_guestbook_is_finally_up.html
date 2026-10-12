@@ -81,6 +81,20 @@
             </div>
         </div>
     </div>
+    <section class="blog-comments-menu" aria-labelledby="blog-comments-title">
+        <h2 class="menu-header" id="blog-comments-title">Comments</h2>
+        <div class="blog-comments-content">
+            <p class="blog-comments-status" role="status" aria-live="polite"></p>
+            <div class="blog-comments-list"></div>
+            <form class="blog-comment-form" id="blog-comment-form">
+                <label for="comment-name">Name</label>
+                <input id="comment-name" name="screenname" type="text" maxlength="50" placeholder="Your name" required>
+                <label for="comment-message">Comment</label>
+                <textarea id="comment-message" name="message" rows="4" maxlength="1000" placeholder="Write a comment..." required></textarea>
+                <button type="submit">Post comment</button>
+            </form>
+        </div>
+    </section>
 </body>
 <script src="../../scripts/icon_handler.js"></script>
 <script src="../../scripts/background_changer.js"></script>
