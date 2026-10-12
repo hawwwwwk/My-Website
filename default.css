@@ -278,8 +278,12 @@ textarea {
 }
 
 .blog-comments-status {
-    min-height: 1em;
+    margin: 0 0 8px;
     text-align: left;
+}
+
+.blog-comments-status:empty {
+    display: none;
 }
 
 .blog-comment-form {
