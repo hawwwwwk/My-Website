@@ -16,13 +16,9 @@
                 <h1 class="blog-title">Blog</h1>
                 <div class="music-list">
                     <ul id="posts-list">
-                        <!-- posts will be injected here -->
+                        <li>Loading posts...</li>
                     </ul>
                 </div>
-                <div class="menu-divider"></div> <!-- Divider -->
-                <p>
-                    I will update this page later to include things like a search function and tags.
-                </p>
             </div>
             <div class="blog-column-right menu-right"> <!-- Right Column -->
                 <a href="https://ethxn.xyz/" class="menu-item"> <!-- Home -->
@@ -39,6 +35,12 @@
                         <span class="menu-full">Change Background</span>
                     </div>
                 </a>
+                <section class="blog-tag-filter" aria-labelledby="blog-tag-filter-title">
+                    <h2 class="blog-tag-filter-title" id="blog-tag-filter-title">Filter by tag</h2>
+                    <button class="blog-tag-filter-button blog-tag-filter-all" id="show-all-posts" type="button" aria-pressed="true">All posts</button>
+                    <div class="blog-tag-options" id="blog-tag-options"></div>
+                    <p class="blog-tag-filter-status" id="blog-tag-filter-status" aria-live="polite">Loading posts...</p>
+                </section>
                 <div class="menu-divider"></div> <!-- Divider -->
                 <a href="https://ethxn.xyz/feed.xml" class="menu-item"> <!-- RSS -->
                     <img src="/media/rss_icon.png" alt="RSS Icon" class="menu-icon">
