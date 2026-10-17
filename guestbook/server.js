@@ -15,19 +15,30 @@ app.use(cors({
 app.use(bodyParser.json({ limit: '10kb' }));
 app.use(express.static('public'));
 
-const db = mysql.createConnection({
+// Replace closed database connections automatically on subsequent requests.
+const db = mysql.createPool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    charset: 'utf8mb4'
+    charset: 'utf8mb4',
+    waitForConnections: true,
+    connectionLimit: 5,
+    maxIdle: 2,
+    idleTimeout: 60000,
+    queueLimit: 50,
+    connectTimeout: 10000,
+    enableKeepAlive: true
 });
 
-db.connect(err => {
+db.getConnection((err, connection) => {
     if (err) {
-        throw err;
+        // Later requests can reconnect once MySQL becomes available.
+        console.error('MySQL unavailable at startup:', err.code);
+        return;
     }
-    console.log('Connected to MySQL');
+    connection.release();
+    console.log('Connected to MySQL pool');
 });
 
 // GET; retrieve all guestbook entries
@@ -73,6 +84,9 @@ app.post('/submit', (req, res) => {
     const values = [screenname, websiteValue, message];
 
     db.execute(query, values, (err, result) => {
+        // A disconnect can fail both prepare and execute; respond only once.
+        // Never retry an INSERT automatically: it may already have committed.
+        if (res.headersSent) return;
         if (err) {
             console.error("Database error:", err);
             return res.status(500).send('Error saving entry');
@@ -92,6 +106,7 @@ app.get('/comments/:postSlug', (req, res) => {
         'SELECT id, screenname, message, created_at FROM comments WHERE post_slug = ? ORDER BY created_at ASC, id ASC',
         [postSlug],
         (err, results) => {
+            if (res.headersSent) return;
             if (err) {
                 console.error('Database error:', err);
                 return res.status(500).send('Error retrieving comments');
@@ -119,6 +134,7 @@ app.post('/comments', (req, res) => {
         'INSERT INTO comments (post_slug, screenname, message) VALUES (?, ?, ?)',
         [postSlug.trim(), screenname.trim(), message.trim()],
         (err, result) => {
+            if (res.headersSent) return;
             if (err) {
                 console.error('Database error:', err);
                 return res.status(500).send('Error saving comment');
