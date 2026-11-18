@@ -7,3 +7,5 @@ guestbook/.htaccess
 .vscode/
 apache-config/
 .github/copilot-instructions.md
+.kilo/agents/data.md
+/.kilo
