@@ -1,3 +1,17 @@
+html {
+    background-color: #111;
+    background-image: url('/media/background-hills-day.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100%;
+    image-rendering: pixelated;
+}
+
+html body {
+    background-color: transparent;
+}
+
 body {
     background-size: cover;
     background-repeat: no-repeat;
@@ -5,10 +19,37 @@ body {
     image-rendering: pixelated;
     font-family: Tahoma, sans-serif;
     font-size: 12px;
-    height: 100vh;
+    min-height: 100vh;
+    display: flow-root;
     padding: 0;
     margin: 0;
     position: relative;
+}
+
+/* Keep the previous page visible until same-origin navigation is ready. */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(root),
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+html:not(.background-ready)::view-transition-old(root) {
+    animation: hold-background 1s linear infinite;
+    z-index: 1;
+}
+
+html:not(.background-ready)::view-transition-new(root) {
+    opacity: 0;
+}
+
+@keyframes hold-background {
+    from { opacity: 1; }
+    to { opacity: 1; }
 }
 
 p {
