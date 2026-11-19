@@ -293,13 +293,13 @@ textarea {
 }
 
 .blog-post-menu {
-    width: 70%;
+    width: 90%;
+    max-width: 1100px;
     background-color: #FFF;
     border: 2px solid #0078D7;
     box-shadow: 0 0 2px rgba(0, 0, 0, 1);
     border-radius: 5px;
     overflow: hidden;
-    max-width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: auto;
