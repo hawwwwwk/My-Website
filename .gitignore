@@ -8,4 +8,5 @@ guestbook/.htaccess
 apache-config/
 .github/copilot-instructions.md
 .kilo
-agents.md
+AGENTS.md
+node_modules/
